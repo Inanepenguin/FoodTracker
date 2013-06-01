@@ -2,4 +2,7 @@
 <resources>
     <string name="app_name">FoodTracker</string>
     <string name="add_meal"> Add Meal</string>
+    <string name="info_menu">Info</string>
+    <string name="create_menu">Create Meal</string>
+    <string name="title_activity_create_meal">FoodTracker</string>
 </resources>
