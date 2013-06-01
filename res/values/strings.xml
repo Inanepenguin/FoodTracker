@@ -5,4 +5,11 @@
     <string name="info_menu">Info</string>
     <string name="create_menu">Create Meal</string>
     <string name="title_activity_create_meal">FoodTracker</string>
+    <string name="create_title">Create Meal</string>
+    <string name="name_meal">Name: </string>
+    <string name="edit_name"></string>
+    <string name="add_menu">Add Meal</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="lunch">Lunch</string>
+    <string name="dinner">Dinner</string>
 </resources>
