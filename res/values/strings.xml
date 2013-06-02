@@ -18,5 +18,14 @@
     <string name="edit_item2"></string>
     <string name="item3">Item 3: </string>
     <string name="edit_item3"></string>
+    <string name="calories">Calories: </string>
+    <string name="cal"></string>
+    <string name="carbs">Carbs: </string>
+    <string name="edit_carbs"></string>
+    <string name="protein">Protein: </string>
+    <string name="edit_pro"></string>
+    <string name="fat">Fat: </string>
+    <string name="edit_fat"></string>
+    <string name="done">Done</string>
     
 </resources>
