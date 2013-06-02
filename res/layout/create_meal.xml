@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" >
+	
+	    <TextView
+	        android:id="@+id/create_title"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginTop="10dp"
+	        android:text="@string/create_title"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textSize="26sp" />
+	        
+	        <RadioGroup
+	            android:id="@+id/radio_meal"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" >
+	
+	            <RadioButton
+	                android:id="@+id/rad_brkfast"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_marginTop="10dp"
+	                android:layout_weight="1"
+	                android:text="@string/breakfast" />
+	
+	            <RadioButton
+	                android:id="@+id/rad_lunch"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_marginTop="10dp"
+	                android:layout_weight="1"
+	                android:text="@string/lunch" />
+		
+		        <RadioButton
+		            android:id="@+id/rad_dinner"
+		            android:layout_width="0dp"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="10dp"
+		            android:layout_weight="1"
+		            android:text="@string/dinner" />
+		        
+			</RadioGroup>
+			
+	        
+	        <LinearLayout
+	       		 android:layout_width="match_parent"
+	       		 android:layout_height="wrap_content"
+	       		 android:orientation="horizontal" >
+	
+	            <TextView
+	                android:id="@+id/name_meal"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="5dp"
+	                android:layout_marginTop="20dp"
+	                android:textSize="20sp"
+	                android:text="@string/name_meal"
+	                android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	            <EditText
+	                android:id="@+id/edit_name"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_marginRight="5dp"
+	                android:layout_marginTop="15dp"
+	                android:layout_weight="1"
+	                android:ems="10"
+	                android:hint="@string/edit_name" >
+	
+	                <requestFocus />
+	            </EditText>
+	            
+			</LinearLayout>
+	
+	        <LinearLayout 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" >
+	            
+	            
+		        <TextView
+		            android:id="@+id/text_item1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="5dp"
+		            android:layout_marginTop="15dp"
+		            android:textSize="20sp"
+		            android:text="@string/item1"
+		            android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+		        <EditText
+		            android:id="@+id/edit_item1"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginRight="5dp"
+		            android:layout_marginTop="10dp"
+		            android:ems="10"
+		            android:hint="@string/edit_item1" />
+	        
+	        </LinearLayout>
+	        
+	        <LinearLayout 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal">
+	
+	            <TextView
+	                android:id="@+id/text_item2"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="5dp"
+	                android:layout_marginTop="12dp"
+	                android:text="@string/item2"
+	                android:textAppearance="?android:attr/textAppearanceMedium"
+	                android:textSize="20sp" />
+	
+	            <EditText
+	                android:id="@+id/edit_item2"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_marginRight="5dp"
+	                android:layout_marginTop="10dp"
+	                android:ems="10"
+	                android:hint="@string/edit_item2" />
+	            
+	        </LinearLayout>
+	        
+	        <LinearLayout 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal">
+	
+	            <TextView
+	                android:id="@+id/text_item3"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="5dp"
+	                android:layout_marginTop="12dp"
+	                android:text="@string/item3"
+	                android:textSize="20sp"
+	                android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	            <EditText
+	                android:id="@+id/edit_item3"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_marginRight="5dp"
+	                android:layout_marginTop="10dp"
+	                android:ems="10"
+	                android:hint="@string/edit_item3" />
+	
+	        </LinearLayout>
+	        
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" >
+	
+	            <TextView
+	                android:id="@+id/text_cal"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="5dp"
+	                android:layout_marginTop="8dp"
+	                android:text="@string/calories"
+	                android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	            <EditText
+	                android:id="@+id/edit_cal"
+	                android:layout_width="61dp"
+	                android:layout_height="wrap_content"
+	                android:hint="@string/cal"
+	                android:ems="10" />
+	
+	            <TextView
+	                android:id="@+id/text_carbs"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="30dp"
+	                android:layout_marginTop="8dp"
+	                android:text="@string/carbs"
+	                android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	            <EditText
+	                android:id="@+id/edit_carbs"
+	                android:layout_width="61dp"
+	                android:layout_height="wrap_content"
+	                android:hint="@string/edit_carbs"
+	                android:ems="10" />
+	            
+	        </LinearLayout>
+	        
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" >
+	
+	            <TextView
+	                android:id="@+id/text_protein"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="5dp"
+	                android:layout_marginTop="8dp"
+	                android:text="@string/protein"
+	                android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	            <EditText
+	                android:id="@+id/edit_protein"
+	                android:layout_width="61dp"
+	                android:layout_height="wrap_content"
+	
+	                android:ems="10"
+	                android:hint="@string/edit_pro" />
+	
+	            <TextView
+	                android:id="@+id/text_fat"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_marginLeft="37dp"
+	                android:layout_marginTop="8dp"
+	                android:text="@string/fat"
+	                android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	            <EditText
+	                android:id="@+id/edit_fat"
+	                android:layout_width="80dp"
+	                android:layout_height="wrap_content"
+	                android:ems="10"
+	                android:hint="@string/edit_fat" />
+	        </LinearLayout>
+	
+	        <RatingBar
+	            android:id="@+id/ratingBar1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="5dp"
+	            android:rating="2.0"
+	            android:stepSize="1.0" />
+	
+	        <Button
+	            android:id="@+id/done_button"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="right"
+	            android:text="@string/done"
+	            android:onClick="OnClickDone" />
+	
+	</LinearLayout>
+
+</ScrollView>

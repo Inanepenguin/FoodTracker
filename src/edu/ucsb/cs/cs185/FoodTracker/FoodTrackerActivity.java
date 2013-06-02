@@ -2,11 +2,16 @@ package edu.ucsb.cs.cs185.FoodTracker;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Display;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.WindowManager;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class FoodTrackerActivity extends Activity {
     /**
@@ -15,7 +20,8 @@ public class FoodTrackerActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Display display = ((WindowManager)getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
+        @SuppressWarnings("unused")
+		Display display = ((WindowManager)getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
         setContentView(R.layout.main);
         //findViewById(R.id.homeListContainer).getLayoutParams().height = display.getHeight()/2;
         setupWeekOverview();
@@ -42,4 +48,28 @@ public class FoodTrackerActivity extends Activity {
             overview.setText(builder.toString());
         }
     }
+    
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main, menu);
+        return true;
+    }
+    
+    public boolean onOptionsItemSelected(MenuItem item){
+    	switch(item.getItemId()){
+    	case R.id.menu_info:
+    		Toast.makeText(this, "This is the home page and where your daily meals will go.", Toast.LENGTH_SHORT).show();
+    		break;
+    	case R.id.menu_Create:
+    		Intent myIntent = new Intent(this, CreateAMealActivity.class);
+    		startActivity(myIntent);
+    		break;
+    	default:
+    		break;
+    	}
+    	
+    	return true;
+    	
+    }
+
 }
