@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 
@@ -14,22 +13,22 @@ public class CreateAMealActivity extends Activity{
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.create_meal);	
+		setContentView(R.layout.create_meal);
 	}
-	
-	
+
+
 	public void OnClickDone(View v)
 	{
 		finish();
 	}
-	
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.cmealmenu, menu);
 		return true;
 	}
-	
+
 	 public boolean onOptionsItemSelected(MenuItem item){
 		 switch(item.getItemId()){
 		 case R.id.create_info:
@@ -43,5 +42,4 @@ public class CreateAMealActivity extends Activity{
 		 }
 		 return true;
 	 }
-
 }

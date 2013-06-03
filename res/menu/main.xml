@@ -2,14 +2,12 @@
 
     <item
         android:id="@+id/menu_info"
-        android:showAsAction="ifRoom|collapseActionView"
         android:icon="@android:drawable/ic_menu_info_details"
         android:title="@string/info_menu"/>
-    
-    <item 
+
+    <item
         android:id="@+id/menu_Create"
-        android:showAsAction="ifRoom|collapseActionView"
         android:icon="@android:drawable/ic_menu_add"
         android:title="@string/create_menu"/>
-    
+
 </menu>
