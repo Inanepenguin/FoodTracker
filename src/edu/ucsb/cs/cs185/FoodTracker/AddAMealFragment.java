@@ -21,10 +21,10 @@ public class AddAMealFragment extends DialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         // Inflated view to insert into the dialog
 //        final View view = getActivity().getLayoutInflater().inflate(R.layout.add_meal,null);
-        meals.add("\n\rOatmeal and Fruit\n\r");
-        meals.add("\n\rTurkey Sandwich with Chips\n\r");
-        meals.add("\n\rStirfry\n\r");
         meals.add("\n\rChocolate Ice Cream\n\r");
+        meals.add("\n\rOatmeal and Fruit\n\r");
+        meals.add("\n\rStirfry\n\r");
+        meals.add("\n\rTurkey Sandwich with Chips\n\r");
         adapter = new ArrayAdapter<String>(getActivity(),R.layout.meal_row,meals);
         builder.setTitle("Choose a Meal")
                .setSingleChoiceItems(adapter,1,new DialogInterface.OnClickListener() {

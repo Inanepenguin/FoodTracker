@@ -87,7 +87,7 @@ public class FoodTrackerActivity extends FragmentActivity {
     public void addMealForToday(int i) {
         StringBuilder builder = new StringBuilder();
         switch(i){
-            case 0:
+            case 1:
                 builder.append(" Oatmeal and Fruit\n\r");
                 builder.append("\tItems: Cooked oatmeal, fruit, milk\n\r");
                 builder.append("\tCalories:\t\t550\tCarbs:\t25g\n\r");
@@ -96,7 +96,7 @@ public class FoodTrackerActivity extends FragmentActivity {
                 adapter.notifyDataSetChanged();
                 count++;
                 break;
-            case 1:
+            case 3:
                 builder.append(" Turkey Sandwich with Chips\n\r");
                 builder.append("\tItems: Turkey sandwich, potato chips, coke\n\r");
                 builder.append("\tCalories:\t\t890\tCarbs:\t45g\n\r");
@@ -114,7 +114,7 @@ public class FoodTrackerActivity extends FragmentActivity {
                 adapter.notifyDataSetChanged();
                 count++;
                 break;
-            case 3:
+            case 0:
                 builder.append(" Chocolate Ice Cream\n\r");
                 builder.append("\tItems: Chocolate ice cream\n\r");
                 builder.append("\tCalories:\t\t300\tCarbs:\t25g\n\r");
