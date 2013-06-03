@@ -1,16 +1,20 @@
 package edu.ucsb.cs.cs185.FoodTracker;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.FragmentActivity;
 import android.view.*;
-import android.widget.*;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class FoodTrackerActivity extends Activity {
+public class FoodTrackerActivity extends FragmentActivity {
     private int count = 0;
     ListView homeList;
     ArrayList<String> list = new ArrayList<String>();
@@ -25,7 +29,14 @@ public class FoodTrackerActivity extends Activity {
         homeList = (ListView)findViewById(R.id.homeList);
         adapter = new ArrayAdapter<String>(this,R.layout.meal_row,list);
         homeList.setAdapter(adapter);
-
+        findViewById(R.id.mainAddMealButton).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                DialogFragment dialogFragment = new AddAMealFragment();
+                dialogFragment.show(getSupportFragmentManager(),"addAMeal");
+                //addMealForToday();
+            }
+        });
         setupWeekOverview();
     }
 
@@ -73,9 +84,9 @@ public class FoodTrackerActivity extends Activity {
     	return true;
     }
 
-    public void addMealForToday(View view) {
+    public void addMealForToday(int i) {
         StringBuilder builder = new StringBuilder();
-        switch(count){
+        switch(i){
             case 0:
                 builder.append(" Oatmeal and Fruit\n\r");
                 builder.append("\tItems: Cooked oatmeal, fruit, milk\n\r");

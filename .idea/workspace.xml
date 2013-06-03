@@ -25,26 +25,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6296d081-5f0b-420c-ab8a-cd3fb8934dd7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/ucsb/cs/cs185/FoodTracker/CreateAMealActivity.java" afterPath="$PROJECT_DIR$/src/edu/ucsb/cs/cs185/FoodTracker/CreateAMealActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/ucsb/cs/cs185/FoodTracker/AddAMealFragment.java" afterPath="$PROJECT_DIR$/src/edu/ucsb/cs/cs185/FoodTracker/AddAMealFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FoodTracker.iml" afterPath="$PROJECT_DIR$/FoodTracker.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/edu/ucsb/cs/cs185/FoodTracker/FoodTrackerActivity.java" afterPath="$PROJECT_DIR$/src/edu/ucsb/cs/cs185/FoodTracker/FoodTrackerActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/edu/ucsb/cs/cs185/FoodTracker/R.java" afterPath="$PROJECT_DIR$/gen/edu/ucsb/cs/cs185/FoodTracker/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/menu/cmealmenu.xml" afterPath="$PROJECT_DIR$/res/menu/cmealmenu.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/add_meal.xml" afterPath="$PROJECT_DIR$/res/layout/add_meal.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/menu/main.xml" afterPath="$PROJECT_DIR$/res/menu/main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.properties" afterPath="$PROJECT_DIR$/project.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FoodTracker.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/FoodTrackerActivity.java" changelist="6296d081-5f0b-420c-ab8a-cd3fb8934dd7" time="1370222862515" ignored="false" />
-    <file path="/Dummy.txt" changelist="6296d081-5f0b-420c-ab8a-cd3fb8934dd7" time="1370220823012" ignored="false" />
+    <file path="/FoodTrackerActivity.java" changelist="6296d081-5f0b-420c-ab8a-cd3fb8934dd7" time="1370241863041" ignored="false" />
+    <file path="/Dummy.txt" changelist="6296d081-5f0b-420c-ab8a-cd3fb8934dd7" time="1370238016006" ignored="false" />
     <file path="/colors.xml" changelist="6296d081-5f0b-420c-ab8a-cd3fb8934dd7" time="1369692534299" ignored="false" />
     <file path="/strings.xml" changelist="6296d081-5f0b-420c-ab8a-cd3fb8934dd7" time="1369712490467" ignored="false" />
     <file path="/CreateAMealActivity.java" changelist="6296d081-5f0b-420c-ab8a-cd3fb8934dd7" time="1370214730816" ignored="false" />
     <file path="/fragment.java" changelist="6296d081-5f0b-420c-ab8a-cd3fb8934dd7" time="1370215336637" ignored="false" />
-    <file path="/AddAMealFragment.java" changelist="6296d081-5f0b-420c-ab8a-cd3fb8934dd7" time="1370216004252" ignored="false" />
+    <file path="/AddAMealFragment.java" changelist="6296d081-5f0b-420c-ab8a-cd3fb8934dd7" time="1370241853467" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +55,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -93,7 +90,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -118,17 +114,27 @@
       <file leaf-file-name="FoodTrackerActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/ucsb/cs/cs185/FoodTracker/FoodTrackerActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="960" selection-end="960" vertical-scroll-proportion="0.0">
+            <state line="80" column="18" selection-start="3065" selection-end="3065" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddAMealFragment.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/edu/ucsb/cs/cs185/FoodTracker/AddAMealFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="49" selection-start="1452" selection-end="1452" vertical-scroll-proportion="0.6017699">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#422#430#0" expanded="true" />
-                <element signature="e#589#616#1" expanded="true" />
+                <element signature="e#441#449#0" expanded="true" />
+                <element signature="e#1163#1542#0" expanded="true" />
+                <element signature="e#1524#1525#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_meal.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="add_meal.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/add_meal.xml">
           <provider editor-type-id="text-editor">
             <state line="2" column="0" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0">
@@ -166,11 +172,11 @@
         <option value="$PROJECT_DIR$/res/menu/main.xml" />
         <option value="$PROJECT_DIR$/res/menu/cmealmenu.xml" />
         <option value="$PROJECT_DIR$/src/edu/ucsb/cs/cs185/FoodTracker/CreateAMealActivity.java" />
-        <option value="$PROJECT_DIR$/src/edu/ucsb/cs/cs185/FoodTracker/AddAMealFragment.java" />
         <option value="$PROJECT_DIR$/res/layout/meal_row.xml" />
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
-        <option value="$PROJECT_DIR$/src/edu/ucsb/cs/cs185/FoodTracker/FoodTrackerActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/add_meal.xml" />
+        <option value="$PROJECT_DIR$/src/edu/ucsb/cs/cs185/FoodTracker/AddAMealFragment.java" />
+        <option value="$PROJECT_DIR$/src/edu/ucsb/cs/cs185/FoodTracker/FoodTrackerActivity.java" />
       </list>
     </option>
   </component>
@@ -208,6 +214,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -328,12 +335,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="OverrideImplement.combined" value="false" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
@@ -556,10 +563,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="874" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="22" width="1440" height="874" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33428982" sideWeight="0.7851459" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33428982" sideWeight="0.78647214" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -570,12 +577,11 @@
       <window_info id="simpleUML" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19440459" sideWeight="0.7851459" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2148541" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19440459" sideWeight="0.5795756" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21352786" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="SQL" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29196557" sideWeight="0.7851459" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29196557" sideWeight="0.78647214" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.7851459" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39920425" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -589,6 +595,7 @@
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.7851459" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
     </layout>
@@ -653,22 +660,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/edu/ucsb/cs/cs185/FoodTracker/FoodTrackerActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="10" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#422#430#0" expanded="true" />
-            <element signature="e#589#616#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="38" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="5" column="38" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
@@ -731,15 +725,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/ucsb/cs/cs185/FoodTracker/AddAMealFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="32" selection-start="608" selection-end="608" vertical-scroll-proportion="0.39893618">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="34" selection-start="1152" selection-end="1152" vertical-scroll-proportion="0.69148934">
@@ -767,14 +752,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/ucsb/cs/cs185/FoodTracker/FoodTrackerActivity.java">
+    <entry file="jar://$PROJECT_DIR$/libs/android-support-v4.jar!/android/support/v4/app/DialogFragment.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="960" selection-end="960" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#422#430#0" expanded="true" />
-            <element signature="e#589#616#1" expanded="true" />
-          </folding>
+        <state line="76" column="0" selection-start="3154" selection-end="3154" vertical-scroll-proportion="0.5038168">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -786,6 +767,25 @@
       </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/ucsb/cs/cs185/FoodTracker/FoodTrackerActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="18" selection-start="3065" selection-end="3065" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/ucsb/cs/cs185/FoodTracker/AddAMealFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="49" selection-start="1452" selection-end="1452" vertical-scroll-proportion="0.6017699">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#441#449#0" expanded="true" />
+            <element signature="e#1163#1542#0" expanded="true" />
+            <element signature="e#1524#1525#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
   </component>
