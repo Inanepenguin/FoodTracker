@@ -84,8 +84,9 @@ public class FoodTrackerActivity extends FragmentActivity {
     	return true;
     }
 
-    public void addMealForToday(int i) {
+    public void addMealForToday(String choice) {
         StringBuilder builder = new StringBuilder();
+        int i = getChoice(choice);
         switch(i){
             case 1:
                 builder.append(" Oatmeal and Fruit\n\r");
@@ -124,6 +125,19 @@ public class FoodTrackerActivity extends FragmentActivity {
                 count++;
                 break;
         }
+    }
+
+    private int getChoice(String choice){
+        if(choice.equals("\nChocolate Ice Cream\n"))
+            return 0;
+        if(choice.equals("\nOatmeal and Fruit\n"))
+            return 1;
+        if(choice.equals("\nStirfry\n"))
+            return 2;
+        if(choice.equals("\nTurkey Sandwich with Chips\n"))
+            return 4;
+        else
+            return -1;
     }
 
 }
