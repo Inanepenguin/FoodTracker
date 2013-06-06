@@ -27,5 +27,23 @@
     <string name="fat">Fat: </string>
     <string name="edit_fat"></string>
     <string name="done">Done</string>
+    <string name="summary_title">Detailed Summary</string>
+    <string name="sum_brkfast">Breakfast</string>
+    <string name="sum_lunch">Lunch</string>
+    <string name="sum_dinner">Dinner</string>
+    <string name="breakfast_cal">Calories:</string>
+    <string name="breakfast_protein">Protein:</string>
+    <string name="breakfast_fat">Fat:</string>
+    <string name="breakfast_carbs">Carbs:</string>
+    <string name="lunch_fat">Fat:</string>
+    <string name="lunch_protein">Protein:</string>
+    <string name="lunch_carb">Carbs:</string>
+    <string name="lunch_cal">Calories:</string>
+    <string name="din_fat">Fat:</string>
+    <string name="din_cal">Calories:</string>
+    <string name="din_protein">Protein:</string>
+    <string name="din_carb">Carbs:</string>
+    <string name="view_sum">Summary</string>
+    <string name="title_activity_summary_meal">FoodTracker</string>
     
 </resources>

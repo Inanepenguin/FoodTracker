@@ -21,5 +21,9 @@
             android:name="edu.ucsb.cs.cs185.FoodTracker.CreateAMealActivity"
             android:label="@string/title_activity_create_meal" >
         </activity>
+          <activity
+            android:name="edu.ucsb.cs.cs185.FoodTracker.SummaryActivity"
+            android:label="@string/title_activity_summary_meal" >
+        </activity>
     </application>
 </manifest>
