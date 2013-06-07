@@ -128,13 +128,13 @@ public class FoodTrackerActivity extends FragmentActivity {
     }
 
     private int getChoice(String choice){
-        if(choice.equals("\nChocolate Ice Cream\n"))
+        if(choice.equals("Chocolate Ice Cream"))
             return 0;
-        if(choice.equals("\nOatmeal and Fruit\n"))
+        if(choice.equals("Oatmeal and Fruit"))
             return 1;
-        if(choice.equals("\nStirfry\n"))
+        if(choice.equals("Stirfry"))
             return 2;
-        if(choice.equals("\nTurkey Sandwich with Chips\n"))
+        if(choice.equals("Turkey Sandwich with Chips"))
             return 4;
         else
             return -1;

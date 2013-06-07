@@ -2,14 +2,20 @@ package edu.ucsb.cs.cs185.FoodTracker;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.DatePicker;
 import android.widget.ListView;
 import android.widget.Spinner;
 
+import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Locale;
+import java.util.TimeZone;
 
 public class AddAMealFragment extends DialogFragment {
     ArrayAdapter<String> adapter;
@@ -23,25 +29,43 @@ public class AddAMealFragment extends DialogFragment {
         // Inflated view to insert into the dialog
         final View view = getActivity().getLayoutInflater().inflate(R.layout.add_meal,null);
         builder.setView(view)
-                .setTitle("Add a Meal");
-        Spinner mealList = (Spinner)view.findViewById(R.id.meal_picker);
-        meals.add("\nChocolate Ice Cream\n");
-        meals.add("\nFruit Smoothie\n");
-        meals.add("\nLasagna\n");
-        meals.add("\nOatmeal and Fruit\n");
-        meals.add("\nPancakes and Hashbrowns\n");
-        meals.add("\nSalmon and Rice\n");
-        meals.add("\nStirfry\n");
-        meals.add("\nTurkey Sandwich with Chips\n");
+               .setTitle("Add a Meal");
+        final Spinner mealList = (Spinner)view.findViewById(R.id.meal_picker);
+        Calendar cal = Calendar.getInstance(Locale.US);
+        cal.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
+        DatePicker datePicker = (DatePicker)view.findViewById(R.id.date_picker);
+        datePicker.updateDate(cal.get(Calendar.YEAR),cal.get(Calendar.MONTH),cal.get(Calendar.DAY_OF_MONTH));
+        int currentapiVersion = android.os.Build.VERSION.SDK_INT;
+        if (currentapiVersion >= 11) {
+            try {
+                Method m = datePicker.getClass().getMethod("setCalendarViewShown", boolean.class);
+                m.invoke(datePicker, false);
+            }
+            catch (Exception e) {} // eat exception in our case
+        }
+        meals.add("Chocolate Ice Cream");
+        meals.add("Fruit Smoothie");
+        meals.add("Lasagna");
+        meals.add("Oatmeal and Fruit");
+        meals.add("Pancakes and Hashbrowns");
+        meals.add("Salmon and Rice");
+        meals.add("Stirfry");
+        meals.add("Turkey Sandwich with Chips");
         adapter = new ArrayAdapter<String>(getActivity(),R.layout.meal_row,meals);
-//        mealList.setAdapter(adapter);
-//        mealList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                FoodTrackerActivity activity = (FoodTrackerActivity)getActivity();
-//                activity.addMealForToday(adapterView.getItemAtPosition(i).toString());
-//            }
-//        });
+        mealList.setAdapter(adapter);
+        builder.setPositiveButton("Add", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                FoodTrackerActivity activity = (FoodTrackerActivity)getActivity();
+                activity.addMealForToday(mealList.getSelectedItem().toString());
+            }
+        });
+        builder.setNegativeButton("Cancel",new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+            }
+        });
 //        builder.setTitle("Choose a Meal")
 //               .setSingleChoiceItems(adapter,1,new DialogInterface.OnClickListener() {
 //                   @Override
