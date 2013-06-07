@@ -45,5 +45,8 @@
     <string name="din_carb">Carbs:</string>
     <string name="view_sum">Summary</string>
     <string name="title_activity_summary_meal">FoodTracker</string>
+    <string name="history_title">History</string>
+    <string name="view_hist">View History</string>
+    <string name="title_activity_history">FoodTracker</string>
     
 </resources>

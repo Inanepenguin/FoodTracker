@@ -43,6 +43,7 @@ public class CreateAMealActivity extends Activity{
 			Intent summaryInt = new Intent(this, SummaryActivity.class);
 	    	startActivity(summaryInt);
 	    	break;
+	
 		default:
 			break;
 		 }

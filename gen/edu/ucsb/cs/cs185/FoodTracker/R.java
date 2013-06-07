@@ -20,13 +20,13 @@ public final class R {
         public static final int green_plus_md=0x7f020000;
     }
     public static final class id {
-        public static final int BreakfastTotals=0x7f070019;
-        public static final int DinnerTotals=0x7f07001e;
-        public static final int LunchTotals=0x7f07001b;
-        public static final int SevenDayTotalTag=0x7f070024;
-        public static final int SevenDayTotals=0x7f070025;
-        public static final int button=0x7f070023;
-        public static final int create_info=0x7f070026;
+        public static final int BreakfastTotals=0x7f070021;
+        public static final int DinnerTotals=0x7f070026;
+        public static final int LunchTotals=0x7f070023;
+        public static final int SevenDayTotalTag=0x7f07001d;
+        public static final int SevenDayTotals=0x7f07001e;
+        public static final int button=0x7f07001c;
+        public static final int create_info=0x7f070028;
         public static final int create_title=0x7f070000;
         public static final int done_button=0x7f070016;
         public static final int edit_cal=0x7f07000e;
@@ -37,29 +37,37 @@ public final class R {
         public static final int edit_item3=0x7f07000c;
         public static final int edit_name=0x7f070006;
         public static final int edit_protein=0x7f070012;
-        public static final int homeList=0x7f070022;
-        public static final int homeListContainer=0x7f070021;
-        public static final int mainLayout=0x7f070020;
-        public static final int menu_Create=0x7f07002a;
-        public static final int menu_add=0x7f070027;
-        public static final int menu_info=0x7f070029;
-        public static final int menu_summ=0x7f07002b;
-        public static final int menu_summary=0x7f070028;
+        public static final int hist_add=0x7f07002d;
+        public static final int hist_create=0x7f07002c;
+        public static final int hist_info=0x7f07002b;
+        public static final int hist_sum=0x7f07002e;
+        public static final int history_list=0x7f070018;
+        public static final int history_title=0x7f070017;
+        public static final int homeList=0x7f07001b;
+        public static final int homeListContainer=0x7f07001a;
+        public static final int mainLayout=0x7f070019;
+        public static final int menu_Create=0x7f070030;
+        public static final int menu_add=0x7f070029;
+        public static final int menu_history=0x7f070032;
+        public static final int menu_info=0x7f07002f;
+        public static final int menu_summ=0x7f070031;
+        public static final int menu_summary=0x7f07002a;
         public static final int name_meal=0x7f070005;
         public static final int rad_brkfast=0x7f070002;
         public static final int rad_dinner=0x7f070004;
         public static final int rad_lunch=0x7f070003;
         public static final int radio_meal=0x7f070001;
         public static final int ratingBar1=0x7f070015;
-        public static final int ratingBar2=0x7f07001c;
-        public static final int ratingBar3=0x7f07001f;
-        public static final int sum_add=0x7f07002e;
-        public static final int sum_brkfast=0x7f070018;
-        public static final int sum_create=0x7f07002d;
-        public static final int sum_dinner=0x7f07001d;
-        public static final int sum_info=0x7f07002c;
-        public static final int sum_lunch=0x7f07001a;
-        public static final int summary_title=0x7f070017;
+        public static final int ratingBar2=0x7f070024;
+        public static final int ratingBar3=0x7f070027;
+        public static final int sum_add=0x7f070035;
+        public static final int sum_brkfast=0x7f070020;
+        public static final int sum_create=0x7f070034;
+        public static final int sum_dinner=0x7f070025;
+        public static final int sum_history=0x7f070036;
+        public static final int sum_info=0x7f070033;
+        public static final int sum_lunch=0x7f070022;
+        public static final int summary_title=0x7f07001f;
         public static final int text_cal=0x7f07000d;
         public static final int text_carbs=0x7f07000f;
         public static final int text_fat=0x7f070013;
@@ -76,8 +84,9 @@ public final class R {
     }
     public static final class menu {
         public static final int cmealmenu=0x7f060000;
-        public static final int main=0x7f060001;
-        public static final int summenu=0x7f060002;
+        public static final int histmenu=0x7f060001;
+        public static final int main=0x7f060002;
+        public static final int summenu=0x7f060003;
     }
     public static final class string {
         public static final int add_meal=0x7f050001;
@@ -107,6 +116,7 @@ public final class R {
         public static final int edit_name=0x7f050007;
         public static final int edit_pro=0x7f050017;
         public static final int fat=0x7f050018;
+        public static final int history_title=0x7f05002d;
         public static final int info_menu=0x7f050002;
         public static final int item1=0x7f05000c;
         public static final int item2=0x7f05000e;
@@ -123,7 +133,9 @@ public final class R {
         public static final int sum_lunch=0x7f05001d;
         public static final int summary_title=0x7f05001b;
         public static final int title_activity_create_meal=0x7f050004;
+        public static final int title_activity_history=0x7f05002f;
         public static final int title_activity_summary_meal=0x7f05002c;
+        public static final int view_hist=0x7f05002e;
         public static final int view_sum=0x7f05002b;
     }
 }
