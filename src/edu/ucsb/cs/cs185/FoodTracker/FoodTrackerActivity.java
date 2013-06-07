@@ -81,6 +81,10 @@ public class FoodTrackerActivity extends FragmentActivity {
     		Intent summaryInt = new Intent(this, SummaryActivity.class);
     		startActivity(summaryInt);
     		break;
+    	case R.id.menu_history:
+    		Intent historyInt = new Intent(this, HistoryActivity.class);
+    		startActivity(historyInt);
+    		break;
     	default:
     		break;
     	}
