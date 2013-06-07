@@ -73,10 +73,10 @@ public class FoodTrackerActivity extends FragmentActivity {
     	case R.id.menu_info:
     		Toast.makeText(this, "This is the home page and where your daily meals will go.", Toast.LENGTH_SHORT).show();
     		break;
-    	/*case R.id.menu_Create:
+    	case R.id.menu_Create:
     		Intent myIntent = new Intent(this, CreateAMealActivity.class);
     		startActivity(myIntent);
-    	*/case R.id.menu_summ:
+    	case R.id.menu_summ:
     		Intent summaryInt = new Intent(this, SummaryActivity.class);
     		startActivity(summaryInt);
     		break;

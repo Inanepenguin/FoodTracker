@@ -4,13 +4,12 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="17" />
 
-    <application
-        android:allowBackup="true"
-        android:label="@string/app_name" >
+    <uses-sdk android:minSdkVersion="8"
+        android:targetSdkVersion="17"/>
+
+    <application android:allowBackup="true"
+        android:label="@string/app_name">
         <activity
             android:name="edu.ucsb.cs.cs185.FoodTracker.FoodTrackerActivity"
             android:label="@string/app_name" >
@@ -19,10 +18,10 @@
             android:name="edu.ucsb.cs.cs185.FoodTracker.CreateAMealActivity"
             android:label="@string/title_activity_create_meal" >
         </activity>
-          <activity
+        <activity
             android:name="edu.ucsb.cs.cs185.FoodTracker.SummaryActivity"
             android:label="@string/title_activity_summary_meal" >
-          </activity>
+        </activity>
         <activity
             android:name="edu.ucsb.cs.cs185.FoodTracker.HomeActivity"
             android:label="@string/title_activity_home" >
