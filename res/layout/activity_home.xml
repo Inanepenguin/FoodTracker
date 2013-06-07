@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="horizontal"
+    tools:context=".HomeActivity" >
+    
+<!-- 
+    <Button
+        android:id="@+id/home_viewSum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/home_viewHis"
+        android:layout_alignBottom="@+id/home_viewHis"
+        android:layout_toRightOf="@+id/home_setGoal"
+        android:text="@string/VS" />
+
+   
+    
+    
+    
+    
+    
+  <Button
+        android:id="@+id/home_setGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/SG" />
+
+    <Button
+        android:id="@+id/home_viewHis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="54dp"
+        android:layout_toLeftOf="@+id/home_setGoal"
+        android:text="@string/VH" />
+
+    <Button
+        android:id="@+id/home_addMeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="61dp"
+        android:drawableLeft="@android:drawable/ic_menu_add"
+        android:gravity="left|center_vertical"
+        android:text="@string/AM" />
+
+    <Button
+        android:id="@+id/home_createMeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/home_addMeal"
+        android:drawableLeft="@android:drawable/btn_check_buttonless_on"
+        android:gravity="left|center_vertical"
+        android:text="@string/CM" /> -->
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:text="Button" />
+
+</LinearLayout>
