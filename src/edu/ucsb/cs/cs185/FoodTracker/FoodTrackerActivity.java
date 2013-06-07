@@ -76,6 +76,7 @@ public class FoodTrackerActivity extends FragmentActivity {
     	case R.id.menu_Create:
     		Intent myIntent = new Intent(this, CreateAMealActivity.class);
     		startActivity(myIntent);
+    		break;
     	case R.id.menu_summ:
     		Intent summaryInt = new Intent(this, SummaryActivity.class);
     		startActivity(summaryInt);
