@@ -1,6 +1,7 @@
 package edu.ucsb.cs.cs185.FoodTracker;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -37,6 +38,10 @@ public class CreateAMealActivity extends Activity{
 		 case R.id.menu_add:
 			 Toast.makeText(this, "Go back to Add Meal Fragment", Toast.LENGTH_SHORT).show();
 			 break;
+		 case R.id.menu_summary:
+			Intent summaryInt = new Intent(this, SummaryActivity.class);
+	    	startActivity(summaryInt);
+	    	break;
 		default:
 			break;
 		 }

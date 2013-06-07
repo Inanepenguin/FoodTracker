@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="416dp"
+	    android:orientation="vertical" >
+
+	    <TextView
+	        android:id="@+id/summary_title"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginTop="10dp"
+	        android:text="@string/summary_title"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textSize="26sp" />
+
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:orientation="vertical" >
+
+	        <TextView
+	            android:id="@+id/sum_brkfast"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="5dp"
+	            android:layout_marginTop="15dp"
+	            android:text="@string/breakfast"
+	            android:textAppearance="?android:attr/textAppearanceMedium"
+	            android:textSize="20sp" />
+
+	        <TextView
+	            android:id="@+id/BreakfastTotals"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="3dp"
+	            android:textColor="@color/white"
+	            android:textSize="17sp" />
+	    </LinearLayout>
+
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+
+	    <RatingBar
+	        android:id="@+id/ratingBar1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:minHeight="47dp"
+	        android:rating="3" 
+	        android:clickable="false"     
+			android:focusableInTouchMode="false"    
+			android:focusable="false"
+			android:isIndicator="true"/>
+			</LinearLayout>
+
+	    
+
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="11.14"
+	        android:orientation="vertical" >
+
+	        <TextView
+	            android:id="@+id/sum_lunch"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="5dp"
+	            android:layout_marginTop="12dp"
+	            android:text="@string/lunch"
+	            android:textAppearance="?android:attr/textAppearanceMedium"
+	            android:textSize="20sp" />
+
+	        <TextView
+	            android:id="@+id/LunchTotals"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="3dp"
+	            android:textColor="@color/white"
+	            android:textSize="17sp" />
+	    </LinearLayout>
+
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+
+	    <RatingBar
+	        android:id="@+id/ratingBar2"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:minHeight="47dp"
+	        android:rating="2" 
+	        android:isIndicator="true"/>
+</LinearLayout>
+
+	    
+
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:orientation="vertical" >
+
+	        <TextView
+	            android:id="@+id/sum_dinner"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="5dp"
+	            android:layout_marginTop="12dp"
+	            android:text="@string/dinner"
+	            android:textAppearance="?android:attr/textAppearanceMedium"
+	            android:textSize="20sp" />
+
+	        <TextView
+	            android:id="@+id/DinnerTotals"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="3dp"
+	            android:layout_weight="2.50"
+	            android:textColor="@color/white"
+	            android:textSize="17sp" />
+	    </LinearLayout>
+
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+
+	        <RatingBar
+	            android:id="@+id/ratingBar3"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:minHeight="47dp"
+	            android:rating="4" 
+	            android:isIndicator="true"/>
+
+	    </LinearLayout>
+
+	    <Button
+	        android:id="@+id/done_button"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="right"
+	        android:onClick="OnClickDone"
+	        android:text="@string/done" />
+	</LinearLayout>
+
+</ScrollView>
