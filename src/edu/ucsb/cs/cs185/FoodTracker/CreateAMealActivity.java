@@ -7,20 +7,23 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.RatingBar;
 import android.widget.RatingBar.OnRatingBarChangeListener;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 
 
 public class CreateAMealActivity extends Activity{
 
-	private RadioGroup radioMealGroup;
-	private RadioButton radioMealButton;
+	private Spinner  mealSpin;
+	private String[] meal_spin;
+	private String spin_val;
 	private RatingBar ratingBar;
 	private Button btnDone;
 	private EditText eName;
@@ -40,6 +43,7 @@ public class CreateAMealActivity extends Activity{
 		setContentView(R.layout.create_meal);
 		addListenerOnButton();
 		addListenerOnRatingBar();
+		addListenerOnSpinner();
 
 		myMeal = new CreateMealClass();
 	}
@@ -63,17 +67,41 @@ public class CreateAMealActivity extends Activity{
 		});
 	}
 
+	public void addListenerOnSpinner()
+	{
+		mealSpin = (Spinner) findViewById (R.id.spinner_meal);
+		meal_spin = getResources().getStringArray(R.array.meal_array);
+	
+		ArrayAdapter<String> adpt = new ArrayAdapter<String>(CreateAMealActivity.this, android.R.layout.simple_spinner_item, meal_spin);
+		adpt.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+		mealSpin.setAdapter(adpt);
+		
+		mealSpin.setOnItemSelectedListener(new OnItemSelectedListener()
+		{
+			public void onItemSelected(AdapterView<?> arg0, View arg1, int pos, long id)
+			{
+				spin_val = meal_spin[pos];
+				myMeal.setSpinner(spin_val);
+			}
+			
+			public void onNothingSelected(AdapterView<?> arg0)
+			{
+				spin_val = meal_spin[5];
+				myMeal.setSpinner(spin_val);
+			}
+		});
+	}
+	
+	
 	public void addListenerOnButton()
 	{
-		radioMealGroup = (RadioGroup) findViewById(R.id.radio_meal);
 		btnDone = (Button) findViewById (R.id.done_button);
 
 		btnDone.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v)
 			{
-				int selectedId = radioMealGroup.getCheckedRadioButtonId();
-				radioMealButton = (RadioButton) findViewById(selectedId);
+				
 				eName = (EditText) findViewById(R.id.edit_name);
 				eItem1 = (EditText) findViewById(R.id.edit_item1);
 				eItem2 = (EditText) findViewById(R.id.edit_item2);
@@ -86,7 +114,6 @@ public class CreateAMealActivity extends Activity{
 				//this is where I will get my class stuff! use
 				//.getText() to get radioButton stuff
 
-				myMeal.setRadio((String)radioMealButton.getText());
 				myMeal.setMealName(eName.getText().toString());
 				myMeal.set_item1(eItem1.getText().toString());
 				myMeal.set_item2(eItem2.getText().toString());

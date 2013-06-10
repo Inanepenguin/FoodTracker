@@ -56,7 +56,8 @@ public class AddAMealFragment extends DialogFragment {
         builder.setPositiveButton("Add", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                FoodTrackerActivity activity = (FoodTrackerActivity)getActivity();
+            	
+                FoodTrackerActivity activity = (FoodTrackerActivity) getActivity();
                 activity.addMealForToday(mealList.getSelectedItem().toString());
             }
         });
@@ -66,16 +67,7 @@ public class AddAMealFragment extends DialogFragment {
                 dialogInterface.dismiss();
             }
         });
-//        builder.setTitle("Choose a Meal")
-//               .setSingleChoiceItems(adapter,1,new DialogInterface.OnClickListener() {
-//                   @Override
-//                   public void onClick(DialogInterface dialogInterface, int i) {
-//                       FoodTrackerActivity activity = (FoodTrackerActivity)getActivity();
-//                       activity.addMealForToday(adapter.getItem(i));
-//                       dialogInterface.dismiss();
-//                   }
-//               });
-//        list = (ListView)view.findViewById(R.id.addMealList);
+
         return builder.create();
     }
 

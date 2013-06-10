@@ -19,7 +19,7 @@ public class CreateMealClass {
 		
 	}
 	
-	public void setRadio(String ans)
+	public void setSpinner(String ans)
 	{
 		radioAnswer = ans;
 	}

@@ -52,7 +52,8 @@ public class HomeActivity extends FragmentActivity {
 		btnSetG.setOnClickListener(new OnClickListener(){
 			public void onClick(View v)
 			{
-				Toast.makeText(HomeActivity.this, "Set Goals Screen Coming Soon!!", Toast.LENGTH_SHORT).show();
+				Intent myInt = new Intent(HomeActivity.this, SetGoals.class);
+				startActivity(myInt);
 			}
 		});
 

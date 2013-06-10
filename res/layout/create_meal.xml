@@ -20,40 +20,14 @@
 	        android:textAppearance="?android:attr/textAppearanceLarge"
 	        android:textSize="26sp" />
 	        
-	        <RadioGroup
-	            android:id="@+id/radio_meal"
+	        <Spinner 
+	            android:id="@+id/spinner_meal"
 	            android:layout_width="match_parent"
 	            android:layout_height="wrap_content"
-	            android:orientation="horizontal" >
-	
-	            <RadioButton
-	                android:id="@+id/rad_brkfast"
-	                android:layout_width="0dp"
-	                android:layout_height="wrap_content"
-	                android:layout_marginTop="10dp"
-	                android:layout_weight="1"
-	                android:text="@string/breakfast" />
-	
-	            <RadioButton
-	                android:id="@+id/rad_lunch"
-	                android:layout_width="0dp"
-	                android:layout_height="wrap_content"
-	                android:layout_marginTop="10dp"
-	                android:layout_weight="1"
-	                android:checked="true"
-	                android:text="@string/lunch" />
-		
-		        <RadioButton
-		            android:id="@+id/rad_dinner"
-		            android:layout_width="0dp"
-		            android:layout_height="wrap_content"
-		            android:layout_marginTop="10dp"
-		            android:layout_weight="1"
-		            android:text="@string/dinner" />
-		        
-			</RadioGroup>
-			
+	            android:entries="@array/meal_array"
+	            android:prompt="@string/meal_prompt" />
 	        
+	        	        
 	        <LinearLayout
 	       		 android:layout_width="match_parent"
 	       		 android:layout_height="wrap_content"

@@ -52,10 +52,24 @@
     <string name="AM">Add Meal</string>
     <string name="CM">Create Meal</string>
     <string name="VS">View Summary</string>
-	<string name="VH">View History</string>
-	<string name="SG">Set Goal</string>
-	<string name="home_title">Welcome to FoodTracker</string>
+    <string name="VH">View History</string>
+    <string name="SG">Set Goal</string>
+    <string name="home_title">Welcome to FoodTracker</string>
     <string name="history_title">History</string>
     <string name="view_hist">View History</string>
     <string name="title_activity_history">FoodTracker</string>
+    <string name="meal_prompt">Choose a Meal Type</string>
+    <string name="m_home">Home</string>
+
+    <string-array name="meal_array">
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Snack</item>
+        <item>Other</item>
+    </string-array>
+
+    <string name="title_activity_set_goals">SetGoals</string>
+    <string name="hello_world">Hello world!</string>
+
 </resources>
