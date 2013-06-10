@@ -12,12 +12,10 @@
     <item
         android:id="@+id/menu_summ"
         android:title="@string/view_sum"
-        android:icon="@android:drawable/ic_menu_gallery"
-        android:showAsAction="ifRoom|collapseActionView"/>
+        android:icon="@android:drawable/ic_menu_gallery"/>
     <item
         android:id="@+id/menu_history"
         android:icon="@android:drawable/ic_menu_recent_history"
-        android:showAsAction="ifRoom|collapseActionView"
         android:title="@string/view_hist"/>
 
 </menu>
