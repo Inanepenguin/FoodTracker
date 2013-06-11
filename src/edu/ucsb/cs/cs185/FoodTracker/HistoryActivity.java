@@ -99,14 +99,21 @@ public class HistoryActivity extends Activity {
     		Intent myIntent = new Intent(this, CreateAMealActivity.class);
     		startActivity(myIntent);
     		break;
-    	case R.id.hist_add:
-    		/*Intent addIntent = new Intent(this, CreateAMealActivity.class);
-    		startActivity(addIntent);*/
+    	case R.id.menu_home:
+    		Intent homeInt = new Intent(this, HomeActivity.class);
+    		startActivity(homeInt);    		
     		break;
     	case R.id.hist_sum:
     		Intent summaryIntent = new Intent(this, SummaryActivity.class);
     		startActivity(summaryIntent);
     		break;
+    	case R.id.menu_setG:
+    		Intent setInt = new Intent(this, SetGoals.class);
+    		startActivity(setInt);
+    	case R.id.hist_add:
+    		Intent addInt = new Intent(this, FoodTrackerActivity.class);
+			startActivity(addInt);
+			break;
     	default:
     		break;
     	}

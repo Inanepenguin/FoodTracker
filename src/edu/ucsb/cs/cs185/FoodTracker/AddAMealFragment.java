@@ -28,8 +28,7 @@ public class AddAMealFragment extends DialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         // Inflated view to insert into the dialog
         final View view = getActivity().getLayoutInflater().inflate(R.layout.add_meal,null);
-        builder.setView(view)
-               .setTitle("Add a Meal");
+        builder.setView(view).setTitle("Add a Meal");
         final Spinner mealList = (Spinner)view.findViewById(R.id.meal_picker);
         Calendar cal = Calendar.getInstance(Locale.US);
         cal.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));

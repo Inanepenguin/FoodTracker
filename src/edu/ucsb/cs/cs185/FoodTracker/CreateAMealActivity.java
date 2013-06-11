@@ -144,13 +144,26 @@ public class CreateAMealActivity extends Activity{
 			 Toast.makeText(this, "Create a new meal here! It will be saved to you list of meals and can be used later.", Toast.LENGTH_SHORT).show();
 			 break;
 		 case R.id.menu_add:
-			 Toast.makeText(this, "Go back to Add Meal Fragment", Toast.LENGTH_SHORT).show();
+			 Intent addInt = new Intent(this, FoodTrackerActivity.class);
+			 startActivity(addInt);
 			 break;
 		 case R.id.menu_summary:
 			Intent summaryInt = new Intent(this, SummaryActivity.class);
 	    	startActivity(summaryInt);
 	    	break;
-	
+		 case R.id.menu_home:
+			 Intent homeInt = new Intent(this, HomeActivity.class);
+			 startActivity(homeInt);
+			 break;
+		 case R.id.menu_history:
+			 Intent histInt = new Intent(this, HistoryActivity.class);
+			 startActivity(histInt);
+			 break;
+		 case R.id.menu_setG:
+			 Intent setInt = new Intent(this, SetGoals.class);
+			 startActivity(setInt);
+			 break;
+			 
 		default:
 			break;
 		 }

@@ -15,7 +15,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class FoodTrackerActivity extends FragmentActivity {
-    private int count = 0;
+    @SuppressWarnings("unused")
+	private int count = 0;
     ListView homeList;
     ArrayList<String> list = new ArrayList<String>();
     ArrayAdapter<String> adapter;
@@ -84,6 +85,14 @@ public class FoodTrackerActivity extends FragmentActivity {
     	case R.id.menu_history:
     		Intent historyInt = new Intent(this, HistoryActivity.class);
     		startActivity(historyInt);
+    		break;
+    	case R.id.menu_home:
+    		Intent homeInt = new Intent(this, HomeActivity.class);
+    		startActivity(homeInt);
+    		break;
+    	case R.id.menu_setG:
+    		Intent setInt = new Intent(this, SetGoals.class);
+    		startActivity(setInt);
     		break;
     	default:
     		break;
