@@ -2,16 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
     <item
         android:id="@+id/create_info"
-        android:showAsAction="ifRoom|collapseActionView"
         android:icon="@android:drawable/ic_menu_info_details"
         android:title="@string/info_menu"/>
-    
-    <item 
+
+    <item
         android:id="@+id/menu_add"
         android:showAsAction="@android:drawable/ic_menu_add"
         android:icon="@android:drawable/ic_menu_add"
         android:title="@string/add_menu"/>
-    
+
     <item android:id="@+id/menu_summary" android:icon="@android:drawable/ic_menu_gallery" android:title="@string/view_sum" android:showAsAction="@android:drawable/ic_menu_gallery"></item>
 
 </menu>
