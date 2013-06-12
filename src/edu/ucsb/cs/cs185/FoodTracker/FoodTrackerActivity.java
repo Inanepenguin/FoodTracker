@@ -107,7 +107,7 @@ public class FoodTrackerActivity extends FragmentActivity {
             case 1:
                 builder.append(" Oatmeal and Fruit\n\r");
                 builder.append("\tItems: Cooked oatmeal, fruit, milk\n\r");
-                builder.append("\tCalories:\t\t550\tCarbs:\t25g\n\r");
+                builder.append("\tCalories:\t\t550\tCarbs:\t\t25g\n\r");
                 builder.append("\tProtein:\t\t\t5g\t\tFat:\t\t\t\t10g");
                 list.add(builder.toString());
                 adapter.notifyDataSetChanged();
@@ -116,7 +116,7 @@ public class FoodTrackerActivity extends FragmentActivity {
             case 3:
                 builder.append(" Turkey Sandwich with Chips\n\r");
                 builder.append("\tItems: Turkey sandwich, potato chips, coke\n\r");
-                builder.append("\tCalories:\t\t890\tCarbs:\t45g\n\r");
+                builder.append("\tCalories:\t\t890\tCarbs:\t\t45g\n\r");
                 builder.append("\tProtein:\t\t\t32g\tFat:\t\t\t\t30g");
                 list.add(builder.toString());
                 adapter.notifyDataSetChanged();
@@ -125,7 +125,7 @@ public class FoodTrackerActivity extends FragmentActivity {
             case 2:
                 builder.append(" Stirfry\n\r");
                 builder.append("\tItems: Chicken vegetable stirfry, lemonade\n\r");
-                builder.append("\tCalories:\t\t860\tCarbs:\t33g\n\r");
+                builder.append("\tCalories:\t\t860\tCarbs:\t\t33g\n\r");
                 builder.append("\tProtein:\t\t\t30g\tFat:\t\t\t\t27g");
                 list.add(builder.toString());
                 adapter.notifyDataSetChanged();
@@ -134,12 +134,47 @@ public class FoodTrackerActivity extends FragmentActivity {
             case 0:
                 builder.append(" Chocolate Ice Cream\n\r");
                 builder.append("\tItems: Chocolate ice cream\n\r");
-                builder.append("\tCalories:\t\t300\tCarbs:\t25g\n\r");
+                builder.append("\tCalories:\t\t300\tCarbs:\t\t25g\n\r");
                 builder.append("\tProtein:\t\t\t5g\t\tFat:\t\t\t\t15g");
                 list.add(builder.toString());
                 adapter.notifyDataSetChanged();
                 count++;
                 break;
+            case 4:
+            	builder.append(" Fruit Smoothie\n\r");
+            	builder.append("\tItems: Strawberries, bananas, kiwi\n\r");
+            	builder.append("\tCalories:\t\t160\tCarbs:\t\t14g\n\r");
+            	builder.append("\tProtein:\t\t\t3g\t\tFat:\t\t\t\t1g");
+            	list.add(builder.toString());
+            	adapter.notifyDataSetChanged();
+            	count++;
+            	break;
+            case 5:
+            	builder.append(" Lasagna\n\r");
+            	builder.append("\tItems: Sauce, Beef, Pasta\n\r");
+            	builder.append("\tCalories:\t\t127\tCarbs:\t\t12.9g\n\r");
+            	builder.append("\tProtein:\t\t\t8.3g\t\tFat:\t\t\t\t4.7g");
+            	list.add(builder.toString());
+            	adapter.notifyDataSetChanged();
+            	count++;
+                break;
+            case 6:
+            	builder.append(" Pancakes and Hashbrowns\n\r");
+            	builder.append("\tItems: Pancakes and hashbrown\n\r");
+            	builder.append("\tCalories:\t\t141.3\tCarbs:\t\t22.1g\n\r");
+            	builder.append("\tProtein:\t\t\t4g\t\tFat:\t\t\t\4.2t4g");
+            	list.add(builder.toString());
+            	adapter.notifyDataSetChanged();
+            	count++;
+            	break;
+            case 7:
+            	builder.append(" Salmon and Rice\n\r");
+            	builder.append("\tItems: Salmon and Rice\n\r");
+            	builder.append("\tCalories:\t\t540\tCarbs:\t\t71g\n\r");
+            	builder.append("\tProtein:\t\t\t28g\t\tFat:\t\t\t\t17g");
+            	list.add(builder.toString());
+            	adapter.notifyDataSetChanged();
+            	count++;
         }
     }
 
@@ -152,6 +187,14 @@ public class FoodTrackerActivity extends FragmentActivity {
             return 2;
         if(choice.equals("Turkey Sandwich with Chips"))
             return 3;
+        if(choice.equals("Fruit Smoothie"))
+        	return 4;
+        if(choice.equals("Lasagna"))
+        	return 5;
+        if(choice.equals("Pancakes and Hashbrowns"))
+        	return 6;
+        if(choice.equals("Salmon and Rice"))
+        	return 7;
         else
             return -1;
     }

@@ -48,11 +48,11 @@ public class SetGoals extends FragmentActivity {
 		 case R.id.menu_info:
 			 Toast.makeText(this, "Use this page to set your goals.", Toast.LENGTH_SHORT).show();
 			 break;
-		 case R.id.hist_add:
+		 case R.id.menu_add:
 			 Intent addInt = new Intent(this, FoodTrackerActivity.class);
 			 startActivity(addInt);
 			 break;
-		 case R.id.menu_Create:
+		 case R.id.sum_create:
 			 Intent myIntent = new Intent(this, CreateAMealActivity.class);
 	    	 startActivity(myIntent);
 	    	 break;
@@ -60,7 +60,7 @@ public class SetGoals extends FragmentActivity {
 			 Intent histInt = new Intent(this, HistoryActivity.class);
 	    	 startActivity(histInt);
 	    	 break;
-		 case R.id.menu_summ:
+		 case R.id.menu_summary:
 			 Intent summaryInt = new Intent(this, SummaryActivity.class);
 		     startActivity(summaryInt);
 		     break;
