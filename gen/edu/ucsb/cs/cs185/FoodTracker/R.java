@@ -38,7 +38,7 @@ public final class R {
         public static final int LunchTotals=0x7f09004b;
         public static final int SevenDayTotalTag=0x7f090038;
         public static final int SevenDayTotals=0x7f090039;
-        public static final int action_settings=0x7f09005a;
+        public static final int action_settings=0x7f090056;
         public static final int btnSetG=0x7f090046;
         public static final int create_info=0x7f090051;
         public static final int create_title=0x7f09001e;
@@ -62,10 +62,10 @@ public final class R {
         public static final int edit_sMn=0x7f09003d;
         public static final int edit_setFat=0x7f090045;
         public static final int edit_setProt=0x7f090043;
-        public static final int hist_add=0x7f090057;
-        public static final int hist_create=0x7f090058;
-        public static final int hist_info=0x7f090056;
-        public static final int hist_sum=0x7f090059;
+        public static final int hist_add=0x7f090058;
+        public static final int hist_create=0x7f090059;
+        public static final int hist_info=0x7f090057;
+        public static final int hist_sum=0x7f09005a;
         public static final int history_list=0x7f090033;
         public static final int history_title=0x7f090032;
         public static final int homeList=0x7f090036;
@@ -145,11 +145,12 @@ public final class R {
     }
     public static final class menu {
         public static final int cmealmenu=0x7f080000;
-        public static final int histmenu=0x7f080001;
-        public static final int home=0x7f080002;
-        public static final int main=0x7f080003;
-        public static final int set_goals=0x7f080004;
-        public static final int summenu=0x7f080005;
+        public static final int globals_class=0x7f080001;
+        public static final int histmenu=0x7f080002;
+        public static final int home=0x7f080003;
+        public static final int main=0x7f080004;
+        public static final int set_goals=0x7f080005;
+        public static final int summenu=0x7f080006;
     }
     public static final class string {
         public static final int AM=0x7f060030;
@@ -192,6 +193,7 @@ public final class R {
         public static final int edit_setMealsnum=0x7f060040;
         public static final int edit_setProt=0x7f060043;
         public static final int fat=0x7f060018;
+        public static final int hello_world=0x7f06004a;
         public static final int history_title=0x7f060036;
         public static final int home_title=0x7f060035;
         public static final int info_menu=0x7f060002;
@@ -217,6 +219,7 @@ public final class R {
         public static final int summary_title=0x7f06001c;
         public static final int symbol=0x7f060048;
         public static final int title_activity_create_meal=0x7f060004;
+        public static final int title_activity_globals_class=0x7f060049;
         public static final int title_activity_history=0x7f060038;
         public static final int title_activity_home=0x7f06002e;
         public static final int title_activity_set_goals=0x7f06003b;

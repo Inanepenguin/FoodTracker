@@ -68,4 +68,54 @@ public class CreateMealClass {
 	{
 		meal_rating = rating;
 	}
+	
+	public String getSpinner()
+	{
+		return this.spinAnswer;
+	}
+	
+	public String getMealName()
+	{
+		return this.mealName;
+	}
+	
+	public String getItem1()
+	{
+		return this.meal_item1;
+	}
+	
+	public String getItem2()
+	{
+		return this.meal_item2;
+	}
+	
+	public String getItem3()
+	{
+		return this.meal_item3;
+	}
+	
+	public String getCal()
+	{
+		return this.meal_cal;
+	}
+	
+	public String getCarb()
+	{
+		return this.meal_carb;
+	}
+	
+	public String getProt()
+	{
+		return this.meal_prot;
+	}
+	
+	public String getFat()
+	{
+		return this.meal_fat;
+	}
+	
+	public String getRating()
+	{
+		return this.meal_rating;
+	}
 }

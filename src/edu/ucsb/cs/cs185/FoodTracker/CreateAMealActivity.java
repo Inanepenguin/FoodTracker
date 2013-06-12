@@ -35,6 +35,8 @@ public class CreateAMealActivity extends Activity{
 	private EditText eFat;
 	private EditText eProt;
 	private CreateMealClass myMeal;
+	GlobalsClass glob;
+	private int gCnt;
 
 
 
@@ -46,6 +48,8 @@ public class CreateAMealActivity extends Activity{
 		addListenerOnSpinner();
 
 		myMeal = new CreateMealClass();
+		glob = (GlobalsClass)getApplication();
+		gCnt = glob.getCount();
 	}
 
 
@@ -123,6 +127,9 @@ public class CreateAMealActivity extends Activity{
 				myMeal.setFat(eFat.getText().toString());
 				myMeal.setProt(eProt.getText().toString());
 
+				glob.setMealC(myMeal, gCnt);
+				glob.setCount();
+				
 				finish();
 			}
 		});

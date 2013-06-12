@@ -83,5 +83,7 @@
     <string name="set_newG">Set New Goals</string>
     <string name="zero">0</string>
     <string name="symbol">/</string>
+    <string name="title_activity_globals_class">GlobalsClass</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>
