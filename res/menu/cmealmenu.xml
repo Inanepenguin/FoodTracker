@@ -21,10 +21,10 @@
         android:icon="@android:drawable/ic_menu_set_as"
         android:title="@string/menu_setG" />
         
-      <item
-	        android:id="@+id/menu_history"
-	        android:icon="@android:drawable/ic_menu_recent_history"
-	        android:title="@string/view_hist"/>
+     <item
+        android:id="@+id/menu_history"
+        android:icon="@android:drawable/ic_menu_recent_history"
+        android:title="@string/view_hist"/>
  
     <item android:id="@+id/menu_summary" 
         android:icon="@android:drawable/ic_menu_gallery" 

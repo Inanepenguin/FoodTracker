@@ -3,7 +3,7 @@
     <item android:id="@+id/menu_home" android:icon="@android:drawable/ic_menu_myplaces" android:title="@string/m_home" />
     <item android:id="@+id/hist_info" android:icon="@android:drawable/ic_menu_info_details" android:title="@string/info_menu"></item>
     <item android:id="@+id/hist_add" android:icon="@android:drawable/ic_menu_add" android:title="@string/add_menu"></item>
-    <item android:id="@+id/hist_create" android:icon="@android:drawable/ic_menu_add" android:title="@string/create_menu"></item>
+    <item android:id="@+id/hist_create" android:icon="@android:drawable/ic_menu_edit" android:title="@string/create_menu"></item>
     <item android:id="@+id/menu_setG" android:icon="@android:drawable/ic_menu_set_as" android:title="@string/menu_setG" />
     <item android:id="@+id/hist_sum" android:title="@string/view_sum" android:icon="@android:drawable/ic_menu_gallery"></item>
 

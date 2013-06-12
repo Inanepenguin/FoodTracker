@@ -35,7 +35,6 @@ public class FoodTrackerActivity extends FragmentActivity {
             public void onClick(View view) {
                 DialogFragment dialogFragment = new AddAMealFragment();
                 dialogFragment.show(getSupportFragmentManager(),"addAMeal");
-                //addMealForToday();
             }
         });
         setupWeekOverview();
@@ -152,7 +151,7 @@ public class FoodTrackerActivity extends FragmentActivity {
         if(choice.equals("Stirfry"))
             return 2;
         if(choice.equals("Turkey Sandwich with Chips"))
-            return 4;
+            return 3;
         else
             return -1;
     }

@@ -3,7 +3,7 @@ package edu.ucsb.cs.cs185.FoodTracker;
 public class CreateMealClass {
 
 	//for radio button look up how to store value!
-	private String radioAnswer;
+	private String spinAnswer;
 	private String mealName;
 	private String meal_item1;
 	private String meal_item2;
@@ -21,7 +21,7 @@ public class CreateMealClass {
 	
 	public void setSpinner(String ans)
 	{
-		radioAnswer = ans;
+		spinAnswer = ans;
 	}
 	
 	public void setMealName(String name)

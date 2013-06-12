@@ -1,33 +1,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
-       <item 
-           android:id="@+id/menu_home" 
-           android:icon="@android:drawable/ic_menu_myplaces" 
-           android:title="@string/m_home" />
-
-	    <item
-	        android:id="@+id/menu_info"
-	        android:icon="@android:drawable/ic_menu_info_details"
-	        android:title="@string/info_menu"/>
-	
-	    <item android:id="@+id/hist_add" 
-	        android:icon="@android:drawable/ic_menu_add" 
-	        android:title="@string/add_menu" />
-	    
-	    <item
-	        android:id="@+id/menu_Create"
-	        android:icon="@android:drawable/ic_menu_add"
-	        android:title="@string/create_menu"/>
-	    
-	      <item
-	        android:id="@+id/menu_history"
-	        android:icon="@android:drawable/ic_menu_recent_history"
-	        android:title="@string/view_hist"/>
-	      
-	    <item
-	        android:id="@+id/menu_summ"
-	        android:title="@string/view_sum"
-	        android:icon="@android:drawable/ic_menu_gallery"/>
-	  
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
 
 </menu>

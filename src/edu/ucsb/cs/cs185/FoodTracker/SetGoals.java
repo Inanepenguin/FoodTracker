@@ -1,18 +1,35 @@
 package edu.ucsb.cs.cs185.FoodTracker;
 
 import android.os.Bundle;
-import android.app.Activity;
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.app.DialogFragment;
+import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.Toast;
 
-public class SetGoals extends Activity {
+public class SetGoals extends FragmentActivity {
+	
+	Button btnsetG;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_set_goals);
+	}
+	
+	@SuppressLint("NewApi")
+	public void FragmentStart(View v)
+	{
+		if(v == findViewById(R.id.setGoals))
+		{
+			DialogFragment newF = new SetGoalsFragment();
+			newF.show(getFragmentManager(), "setGoalsFrag");
+		}
 	}
 
 	@Override

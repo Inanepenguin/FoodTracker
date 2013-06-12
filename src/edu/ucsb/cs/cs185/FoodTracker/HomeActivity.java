@@ -1,15 +1,15 @@
 package edu.ucsb.cs.cs185.FoodTracker;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
 
-public class HomeActivity extends FragmentActivity {
+public class HomeActivity extends Activity {
 
 	private Button btnCreateM;
 	private Button btnSetG;

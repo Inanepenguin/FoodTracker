@@ -12,7 +12,7 @@
 
     <item
         android:id="@+id/menu_Create"
-        android:icon="@android:drawable/ic_menu_add"
+        android:icon="@android:drawable/ic_menu_edit"
         android:title="@string/create_menu"/>
     
     <item 
