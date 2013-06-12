@@ -37,6 +37,10 @@ public class CreateAMealActivity extends Activity{
 	private CreateMealClass myMeal;
 	GlobalsClass glob;
 	private int gCnt;
+	private int cCal;
+	private int cCarb;
+	private int cProt;
+	private int cFat;
 
 
 
@@ -64,8 +68,6 @@ public class CreateAMealActivity extends Activity{
 		ratingBar.setOnRatingBarChangeListener(new OnRatingBarChangeListener(){
 			public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser)
 			{
-				//where I will set my meal's rating. ---
-				//use String.valueof(ratingBar.getRating());
 				myMeal.setRating(String.valueOf(ratingBar.getRating()));
 			}
 		});
@@ -122,13 +124,23 @@ public class CreateAMealActivity extends Activity{
 				myMeal.set_item1(eItem1.getText().toString());
 				myMeal.set_item2(eItem2.getText().toString());
 				myMeal.set_item3(eItem3.getText().toString());
-				myMeal.setCal(eCal.getText().toString());
-				myMeal.setCarb(eCarb.getText().toString());
-				myMeal.setFat(eFat.getText().toString());
-				myMeal.setProt(eProt.getText().toString());
+				myMeal.setCal(Integer.parseInt(eCal.getText().toString()));
+				myMeal.setCarb(Integer.parseInt(eCarb.getText().toString()));
+				myMeal.setFat(Integer.parseInt(eFat.getText().toString()));
+				myMeal.setProt(Integer.parseInt(eProt.getText().toString()));
 
+				cCal = myMeal.getCal();
+				cCarb = myMeal.getCarb();
+				cProt = myMeal.getProt();
+				cFat = myMeal.getFat();
+				
 				glob.setMealC(myMeal, gCnt);
 				glob.setCount();
+				glob.setTMeals(gCnt);
+				glob.setTCal(cCal);
+				glob.setTCarb(cCarb);
+				glob.setTFat(cFat);
+				glob.setTProt(cProt);
 				
 				finish();
 			}

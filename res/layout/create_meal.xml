@@ -156,6 +156,7 @@
 	                android:layout_width="61dp"
 	                android:layout_height="wrap_content"
 	                android:hint="@string/cal"
+	               	android:inputType="number"
 	                android:ems="10" />
 	
 	            <TextView
@@ -172,6 +173,7 @@
 	                android:layout_width="61dp"
 	                android:layout_height="wrap_content"
 	                android:hint="@string/edit_carbs"
+	                android:inputType="number"
 	                android:ems="10" />
 	            
 	        </LinearLayout>
@@ -194,7 +196,7 @@
 	                android:id="@+id/edit_protein"
 	                android:layout_width="61dp"
 	                android:layout_height="wrap_content"
-	
+	                android:inputType="number"
 	                android:ems="10"
 	                android:hint="@string/edit_pro" />
 	
@@ -212,6 +214,7 @@
 	                android:layout_width="80dp"
 	                android:layout_height="wrap_content"
 	                android:ems="10"
+	                android:inputType="number"
 	                android:hint="@string/edit_fat" />
 	        </LinearLayout>
 	

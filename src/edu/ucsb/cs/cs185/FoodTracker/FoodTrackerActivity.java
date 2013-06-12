@@ -17,6 +17,7 @@ import java.util.ArrayList;
 public class FoodTrackerActivity extends FragmentActivity {
     @SuppressWarnings("unused")
 	private int count = 0;
+    private int mealH = 1;
     ListView homeList;
     ArrayList<String> list = new ArrayList<String>();
     ArrayAdapter<String> adapter;
@@ -32,6 +33,7 @@ public class FoodTrackerActivity extends FragmentActivity {
         homeList = (ListView)findViewById(R.id.homeList);
         adapter = new ArrayAdapter<String>(this,R.layout.meal_row,list);
         homeList.setAdapter(adapter);
+    	glob = (GlobalsClass) getApplication();
         findViewById(R.id.mainAddMealButton).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -40,6 +42,10 @@ public class FoodTrackerActivity extends FragmentActivity {
             }
         });
         setupWeekOverview();
+        if(glob.getCount() != 0)
+        {
+        	addMealForToday(glob.getMealC(glob.getCount()).getMealName().toString());
+        }
     }
 
     public GlobalsClass getGlobal()
@@ -109,7 +115,6 @@ public class FoodTrackerActivity extends FragmentActivity {
     }
 
     public void addMealForToday(String choice) {
-    	glob = (GlobalsClass) getApplication();
     	if((gCounter =  glob.getCount()) != 0)
     	{
     		CreateMealClass mCreated = glob.getMealC(gCounter);
@@ -127,8 +132,10 @@ public class FoodTrackerActivity extends FragmentActivity {
     		adapter.notifyDataSetChanged();
     		count++;
     	}
+    	else{
 	        StringBuilder builder = new StringBuilder();
 	        int i = getChoice(choice);
+	        glob.setTMeals(mealH);
 	        switch(i)
 	        {
 	            case 1:
@@ -136,6 +143,10 @@ public class FoodTrackerActivity extends FragmentActivity {
 	                builder.append("\tItems: Cooked oatmeal, fruit, milk\n\r");
 	                builder.append("\tCalories:\t\t550\tCarbs:\t\t25g\n\r");
 	                builder.append("\tProtein:\t\t\t5g\t\tFat:\t\t\t\t10g");
+	                glob.setTCal(550);
+	                glob.setTCarb(25);
+	                glob.setTFat(10);
+	                glob.setTProt(5);
 	                list.add(builder.toString());
 	                adapter.notifyDataSetChanged();
 	                count++;
@@ -145,6 +156,10 @@ public class FoodTrackerActivity extends FragmentActivity {
 	                builder.append("\tItems: Turkey sandwich, potato chips, coke\n\r");
 	                builder.append("\tCalories:\t\t890\tCarbs:\t\t45g\n\r");
 	                builder.append("\tProtein:\t\t\t32g\tFat:\t\t\t\t30g");
+	                glob.setTCal(890);
+	                glob.setTCarb(45);
+	                glob.setTFat(30);
+	                glob.setTProt(32);
 	                list.add(builder.toString());
 	                adapter.notifyDataSetChanged();
 	                count++;
@@ -154,6 +169,10 @@ public class FoodTrackerActivity extends FragmentActivity {
 	                builder.append("\tItems: Chicken vegetable stirfry, lemonade\n\r");
 	                builder.append("\tCalories:\t\t860\tCarbs:\t\t33g\n\r");
 	                builder.append("\tProtein:\t\t\t30g\tFat:\t\t\t\t27g");
+	                glob.setTCal(860);
+	                glob.setTCarb(33);
+	                glob.setTFat(27);
+	                glob.setTProt(30);
 	                list.add(builder.toString());
 	                adapter.notifyDataSetChanged();
 	                count++;
@@ -163,6 +182,10 @@ public class FoodTrackerActivity extends FragmentActivity {
 	                builder.append("\tItems: Chocolate ice cream\n\r");
 	                builder.append("\tCalories:\t\t300\tCarbs:\t\t25g\n\r");
 	                builder.append("\tProtein:\t\t\t5g\t\tFat:\t\t\t\t15g");
+	                glob.setTCal(300);
+	                glob.setTCarb(25);
+	                glob.setTFat(15);
+	                glob.setTProt(5);
 	                list.add(builder.toString());
 	                adapter.notifyDataSetChanged();
 	                count++;
@@ -172,6 +195,10 @@ public class FoodTrackerActivity extends FragmentActivity {
 	            	builder.append("\tItems: Strawberries, bananas, kiwi\n\r");
 	            	builder.append("\tCalories:\t\t160\tCarbs:\t\t14g\n\r");
 	            	builder.append("\tProtein:\t\t\t3g\t\tFat:\t\t\t\t1g");
+	            	glob.setTCal(160);
+		            glob.setTCarb(14);
+		            glob.setTFat(1);
+		            glob.setTProt(3);
 	            	list.add(builder.toString());
 	            	adapter.notifyDataSetChanged();
 	            	count++;
@@ -181,6 +208,10 @@ public class FoodTrackerActivity extends FragmentActivity {
 	            	builder.append("\tItems: Sauce, Beef, Pasta\n\r");
 	            	builder.append("\tCalories:\t\t127\tCarbs:\t\t12.9g\n\r");
 	            	builder.append("\tProtein:\t\t\t8.3g\t\tFat:\t\t\t\t4.7g");
+	            	glob.setTCal(127);
+		            glob.setTCarb(13);
+		            glob.setTFat(5);
+		            glob.setTProt(8);
 	            	list.add(builder.toString());
 	            	adapter.notifyDataSetChanged();
 	            	count++;
@@ -190,6 +221,10 @@ public class FoodTrackerActivity extends FragmentActivity {
 	            	builder.append("\tItems: Pancakes and hashbrown\n\r");
 	            	builder.append("\tCalories:\t\t141.3\tCarbs:\t\t22.1g\n\r");
 	            	builder.append("\tProtein:\t\t\t4g\t\tFat:\t\t\t\4.2t4g");
+	            	glob.setTCal(141);
+		            glob.setTCarb(22);
+		            glob.setTFat(5);
+		            glob.setTProt(4);
 	            	list.add(builder.toString());
 	            	adapter.notifyDataSetChanged();
 	            	count++;
@@ -199,9 +234,14 @@ public class FoodTrackerActivity extends FragmentActivity {
 	            	builder.append("\tItems: Salmon and Rice\n\r");
 	            	builder.append("\tCalories:\t\t540\tCarbs:\t\t71g\n\r");
 	            	builder.append("\tProtein:\t\t\t28g\t\tFat:\t\t\t\t17g");
+	            	glob.setTCal(540);
+		            glob.setTCarb(71);
+		            glob.setTFat(17);
+		            glob.setTProt(28);
 	            	list.add(builder.toString());
 	            	adapter.notifyDataSetChanged();
 	            	count++;
+	        }
     	}
     }
 
