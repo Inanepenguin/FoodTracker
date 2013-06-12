@@ -108,12 +108,12 @@ public final class R {
         public static final int set_fat=0x7f090044;
         public static final int set_prot=0x7f090042;
         public static final int spinner_meal=0x7f09001f;
-        public static final int sum_add=0x7f09005f;
+        public static final int sum_add=0x7f090060;
         public static final int sum_brkfast=0x7f090048;
-        public static final int sum_create=0x7f090060;
+        public static final int sum_create=0x7f09005e;
         public static final int sum_dinner=0x7f09004d;
         public static final int sum_history=0x7f090061;
-        public static final int sum_info=0x7f09005e;
+        public static final int sum_info=0x7f09005f;
         public static final int sum_lunch=0x7f09004a;
         public static final int summary_title=0x7f090047;
         public static final int symbol1=0x7f090009;

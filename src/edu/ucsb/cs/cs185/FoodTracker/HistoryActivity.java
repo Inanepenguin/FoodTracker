@@ -110,6 +110,7 @@ public class HistoryActivity extends Activity {
     	case R.id.menu_setG:
     		Intent setInt = new Intent(this, SetGoals.class);
     		startActivity(setInt);
+    		break;
     	case R.id.hist_add:
     		Intent addInt = new Intent(this, FoodTrackerActivity.class);
 			startActivity(addInt);
