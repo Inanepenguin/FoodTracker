@@ -1,9 +1,7 @@
 package edu.ucsb.cs.cs185.FoodTracker;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -67,8 +65,20 @@ public class SummaryActivity extends Activity {
     		startActivity(myIntent);
     		break;
     	case R.id.sum_add:
-    		/*Intent addIntent = new Intent(this, CreateAMealActivity.class);
-    		startActivity(addIntent);*/
+    		Intent addInt = new Intent(this, FoodTrackerActivity.class);
+			startActivity(addInt);
+			break;
+     	case R.id.menu_home:
+    		Intent homeInt = new Intent(this, HomeActivity.class);
+    		startActivity(homeInt);
+    		break;
+    	case R.id.menu_setG:
+    		Intent setInt = new Intent(this, SetGoals.class);
+    		startActivity(setInt);
+    		break;
+    	case R.id.sum_history:
+    		Intent histInt = new Intent(this, HistoryActivity.class);
+    		startActivity(histInt);
     		break;
     	default:
     		break;

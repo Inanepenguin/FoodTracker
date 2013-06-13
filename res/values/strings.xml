@@ -9,7 +9,7 @@
     <string name="create_title">Create Meal</string>
     <string name="name_meal">Name: </string>
     <string name="edit_name"></string>
-    <string name="add_menu">Add Meal</string>
+    <string name="add_menu">Today\'s Meal</string>
     <string name="breakfast">Breakfast</string>
     <string name="lunch">Lunch</string>
     <string name="dinner">Dinner</string>
@@ -49,13 +49,41 @@
     <string name="title_activity_summary_meal">FoodTracker</string>
     <string name="title_activity_home">FoodTracker</string>
     <string name="action_settings">Settings</string>
-    <string name="AM">Add Meal</string>
+    <string name="AM">Today\'s Meals</string>
     <string name="CM">Create Meal</string>
     <string name="VS">View Summary</string>
-	<string name="VH">View History</string>
-	<string name="SG">Set Goal</string>
-	<string name="home_title">Welcome to FoodTracker</string>
+    <string name="VH">View History</string>
+    <string name="SG">Today\'s Goals</string>
+    <string name="home_title">Welcome to FoodTracker</string>
     <string name="history_title">History</string>
     <string name="view_hist">View History</string>
     <string name="title_activity_history">FoodTracker</string>
+    <string name="meal_prompt">Choose a Meal Type</string>
+    <string name="m_home">Home</string>
+
+    <string-array name="meal_array">
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+        <item>Snack</item>
+        <item>Other</item>
+    </string-array>
+
+    <string name="title_activity_set_goals">FoodTracker</string>
+    <string name="menu_setG">Today\'s Goals</string>
+    <string name="sevenDayTotals">7 Day Total</string>
+    <string name="SetTitle">Goals for Today: </string>
+    <string name="setMealsnum">Number of Meals: </string>
+    <string name="edit_setMealsnum"></string>
+    <string name="edit_setCal"></string>
+    <string name="edit_setCarbs"></string>
+    <string name="edit_setProt"></string>
+    <string name="edit_setFat"></string>
+    <string name="title_activity_set_goals_fragment">FoodTracker</string>
+    <string name="set_newG">Set New Goals</string>
+    <string name="zero">0</string>
+    <string name="symbol">/</string>
+    <string name="title_activity_globals_class">GlobalsClass</string>
+    <string name="hello_world">Hello world!</string>
+
 </resources>

@@ -3,15 +3,15 @@ package edu.ucsb.cs.cs185.FoodTracker;
 public class CreateMealClass {
 
 	//for radio button look up how to store value!
-	private String radioAnswer;
+	private String spinAnswer;
 	private String mealName;
 	private String meal_item1;
 	private String meal_item2;
 	private String meal_item3;
-	private String meal_cal;
-	private String meal_prot;
-	private String meal_carb;
-	private String meal_fat;
+	private int meal_cal;
+	private int meal_prot;
+	private int meal_carb;
+	private int meal_fat;
 	private String meal_rating;
 	
 	public CreateMealClass()
@@ -19,9 +19,9 @@ public class CreateMealClass {
 		
 	}
 	
-	public void setRadio(String ans)
+	public void setSpinner(String ans)
 	{
-		radioAnswer = ans;
+		spinAnswer = ans;
 	}
 	
 	public void setMealName(String name)
@@ -44,22 +44,22 @@ public class CreateMealClass {
 		meal_item3 = i3;
 	}
 	
-	public void setCal(String cal)
+	public void setCal(int cal)
 	{
 		meal_cal = cal;
 	}
 	
-	public void setProt(String prot)
+	public void setProt(int prot)
 	{
 		meal_prot = prot;
 	}
 	
-	public void setCarb(String carb)
+	public void setCarb(int carb)
 	{
 		meal_carb = carb;
 	}
 	
-	public void setFat(String fat)
+	public void setFat(int fat)
 	{
 		meal_fat = fat;
 	}
@@ -67,5 +67,55 @@ public class CreateMealClass {
 	public void setRating(String rating)
 	{
 		meal_rating = rating;
+	}
+	
+	public String getSpinner()
+	{
+		return this.spinAnswer;
+	}
+	
+	public String getMealName()
+	{
+		return this.mealName;
+	}
+	
+	public String getItem1()
+	{
+		return this.meal_item1;
+	}
+	
+	public String getItem2()
+	{
+		return this.meal_item2;
+	}
+	
+	public String getItem3()
+	{
+		return this.meal_item3;
+	}
+	
+	public int getCal()
+	{
+		return this.meal_cal;
+	}
+	
+	public int getCarb()
+	{
+		return this.meal_carb;
+	}
+	
+	public int getProt()
+	{
+		return this.meal_prot;
+	}
+	
+	public int getFat()
+	{
+		return this.meal_fat;
+	}
+	
+	public String getRating()
+	{
+		return this.meal_rating;
 	}
 }

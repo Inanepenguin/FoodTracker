@@ -20,40 +20,14 @@
 	        android:textAppearance="?android:attr/textAppearanceLarge"
 	        android:textSize="26sp" />
 	        
-	        <RadioGroup
-	            android:id="@+id/radio_meal"
+	        <Spinner 
+	            android:id="@+id/spinner_meal"
 	            android:layout_width="match_parent"
 	            android:layout_height="wrap_content"
-	            android:orientation="horizontal" >
-	
-	            <RadioButton
-	                android:id="@+id/rad_brkfast"
-	                android:layout_width="0dp"
-	                android:layout_height="wrap_content"
-	                android:layout_marginTop="10dp"
-	                android:layout_weight="1"
-	                android:text="@string/breakfast" />
-	
-	            <RadioButton
-	                android:id="@+id/rad_lunch"
-	                android:layout_width="0dp"
-	                android:layout_height="wrap_content"
-	                android:layout_marginTop="10dp"
-	                android:layout_weight="1"
-	                android:checked="true"
-	                android:text="@string/lunch" />
-		
-		        <RadioButton
-		            android:id="@+id/rad_dinner"
-		            android:layout_width="0dp"
-		            android:layout_height="wrap_content"
-		            android:layout_marginTop="10dp"
-		            android:layout_weight="1"
-		            android:text="@string/dinner" />
-		        
-			</RadioGroup>
-			
+	            android:entries="@array/meal_array"
+	            android:prompt="@string/meal_prompt" />
 	        
+	        	        
 	        <LinearLayout
 	       		 android:layout_width="match_parent"
 	       		 android:layout_height="wrap_content"
@@ -182,6 +156,7 @@
 	                android:layout_width="61dp"
 	                android:layout_height="wrap_content"
 	                android:hint="@string/cal"
+	               	android:inputType="number"
 	                android:ems="10" />
 	
 	            <TextView
@@ -198,6 +173,7 @@
 	                android:layout_width="61dp"
 	                android:layout_height="wrap_content"
 	                android:hint="@string/edit_carbs"
+	                android:inputType="number"
 	                android:ems="10" />
 	            
 	        </LinearLayout>
@@ -220,7 +196,7 @@
 	                android:id="@+id/edit_protein"
 	                android:layout_width="61dp"
 	                android:layout_height="wrap_content"
-	
+	                android:inputType="number"
 	                android:ems="10"
 	                android:hint="@string/edit_pro" />
 	
@@ -238,6 +214,7 @@
 	                android:layout_width="80dp"
 	                android:layout_height="wrap_content"
 	                android:ems="10"
+	                android:inputType="number"
 	                android:hint="@string/edit_fat" />
 	        </LinearLayout>
 	
@@ -254,6 +231,7 @@
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
 	            android:layout_gravity="right"
+	            android:gravity="left|center_vertical"
 	            android:text="@string/done"
 	            android:onClick="OnClickDone" />
 	

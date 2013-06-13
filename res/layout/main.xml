@@ -7,7 +7,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/mainLayout"
         android:focusable="true"
-        android:background="@color/black"
+        android:background="@color/gray"
         android:baselineAligned="true">
 
     <RelativeLayout
@@ -46,12 +46,12 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="7 Day Totals"
+                android:text="@string/sevenDayTotals"
                 android:id="@+id/SevenDayTotalTag"
                 android:textColor="@color/sevenDayText"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:textSize="22dp"
+                android:textSize="22sp"
                 android:phoneNumber="false"
                 android:password="false"
                 android:layout_marginLeft="4dp"/>
@@ -60,7 +60,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/SevenDayTotals"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:textColor="@color/sevenDayText"
                 android:layout_alignParentLeft="true"
                 android:layout_below="@+id/SevenDayTotalTag"

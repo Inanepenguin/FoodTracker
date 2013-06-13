@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SetGoalsFragment" >
+
+ <TextView
+        android:id="@+id/setTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/SetTitle"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+	    <TextView
+	        android:id="@+id/setMealsnum"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="20dp"
+	        android:layout_marginTop="10dp"
+	        android:text="@string/setMealsnum"
+	        android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	    <EditText
+	        android:id="@+id/edit_sMn"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="50dp"
+	        android:layout_marginTop="3dp"
+	        android:ems="10"
+	        android:hint="@string/edit_setMealsnum" >
+	
+	        <requestFocus />
+	    </EditText>
+	    
+	</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/set_calories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/din_cal"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/edit_Setcal"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_setCal"
+            android:inputType="number"
+            android:ems="10" />
+
+        <TextView
+            android:id="@+id/set_carbs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/din_carb"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/edit_Setcarbs"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/edit_setCarbs"
+            android:inputType="number"
+            android:ems="10" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/set_prot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/din_protein"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/edit_setProt"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+			android:hint="@string/edit_setProt"
+			android:inputType="number"
+            android:ems="10" />
+
+        <TextView
+            android:id="@+id/set_fat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/din_fat"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/edit_setFat"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+			android:hint="@string/edit_setFat"
+			android:inputType="number"
+            android:ems="10" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSetG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/done" />
+
+</LinearLayout>

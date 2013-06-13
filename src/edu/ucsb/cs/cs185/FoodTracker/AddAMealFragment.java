@@ -21,6 +21,8 @@ public class AddAMealFragment extends DialogFragment {
     ArrayAdapter<String> adapter;
     ArrayList<String> meals = new ArrayList<String>();
     ListView list;
+    private int gCnt;
+    GlobalsClass glob;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState){
@@ -28,12 +30,12 @@ public class AddAMealFragment extends DialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         // Inflated view to insert into the dialog
         final View view = getActivity().getLayoutInflater().inflate(R.layout.add_meal,null);
-        builder.setView(view)
-               .setTitle("Add a Meal");
+        builder.setView(view).setTitle("Add a Meal");
         final Spinner mealList = (Spinner)view.findViewById(R.id.meal_picker);
         Calendar cal = Calendar.getInstance(Locale.US);
         cal.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
         DatePicker datePicker = (DatePicker)view.findViewById(R.id.date_picker);
+        glob = ((FoodTrackerActivity) getActivity()).getGlobal();
         datePicker.updateDate(cal.get(Calendar.YEAR),cal.get(Calendar.MONTH),cal.get(Calendar.DAY_OF_MONTH));
         int currentapiVersion = android.os.Build.VERSION.SDK_INT;
         if (currentapiVersion >= 11) {
@@ -51,12 +53,18 @@ public class AddAMealFragment extends DialogFragment {
         meals.add("Salmon and Rice");
         meals.add("Stirfry");
         meals.add("Turkey Sandwich with Chips");
+        gCnt = glob.getCount();
+        if(gCnt != 0)
+        {
+        	meals.add(glob.getMealC(gCnt).getMealName().toString());
+        }
         adapter = new ArrayAdapter<String>(getActivity(),R.layout.meal_row,meals);
         mealList.setAdapter(adapter);
         builder.setPositiveButton("Add", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                FoodTrackerActivity activity = (FoodTrackerActivity)getActivity();
+            	
+                FoodTrackerActivity activity = (FoodTrackerActivity) getActivity();
                 activity.addMealForToday(mealList.getSelectedItem().toString());
             }
         });
@@ -66,16 +74,7 @@ public class AddAMealFragment extends DialogFragment {
                 dialogInterface.dismiss();
             }
         });
-//        builder.setTitle("Choose a Meal")
-//               .setSingleChoiceItems(adapter,1,new DialogInterface.OnClickListener() {
-//                   @Override
-//                   public void onClick(DialogInterface dialogInterface, int i) {
-//                       FoodTrackerActivity activity = (FoodTrackerActivity)getActivity();
-//                       activity.addMealForToday(adapter.getItem(i));
-//                       dialogInterface.dismiss();
-//                   }
-//               });
-//        list = (ListView)view.findViewById(R.id.addMealList);
+
         return builder.create();
     }
 

@@ -1,0 +1,32 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+  		<item 
+           android:id="@+id/menu_home" 
+           android:icon="@android:drawable/ic_menu_myplaces" 
+           android:title="@string/m_home" />
+    
+    	<item
+      	  android:id="@+id/create_info"
+       	  android:icon="@android:drawable/ic_menu_info_details"
+       	  android:title="@string/info_menu"/>
+
+    	<item
+      	  android:id="@+id/menu_add"
+       	  android:icon="@android:drawable/ic_menu_add"
+       	  android:title="@string/add_menu"/>
+
+    	<item 
+    	   android:id="@+id/sum_create" 
+    	   android:icon="@android:drawable/ic_menu_edit" 
+    	   android:title="@string/create_menu" />
+    	
+    	<item
+          android:id="@+id/menu_history"
+          android:icon="@android:drawable/ic_menu_recent_history"
+          android:title="@string/view_hist"/>
+ 
+    	<item 
+          android:id="@+id/menu_summary" 
+          android:icon="@android:drawable/ic_menu_gallery" 
+          android:title="@string/view_sum" />
+</menu>
