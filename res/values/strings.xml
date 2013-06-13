@@ -61,11 +61,8 @@
 
     <string name="VH">View History</string>
     <string name="SG">Set Goal</string>
-    <string name="SG">Today\'s Goals</string>
+    <string name="TG">Today\'s Goals</string>
     <string name="home_title">Welcome to FoodTracker</string>
-    <string name="history_title">History</string>
-    <string name="view_hist">View History</string>
-    <string name="title_activity_history">FoodTracker</string>
     <string name="meal_prompt">Choose a Meal Type</string>
     <string name="m_home">Home</string>
 
