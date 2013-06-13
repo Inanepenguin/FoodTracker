@@ -1,10 +1,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
-     <item 
-           android:id="@+id/menu_home" 
-           android:icon="@android:drawable/ic_menu_myplaces" 
+     <item
+           android:id="@+id/menu_home"
+           android:icon="@android:drawable/ic_menu_myplaces"
            android:title="@string/m_home" />
-    
+
     <item
         android:id="@+id/menu_info"
         android:icon="@android:drawable/ic_menu_info_details"
@@ -14,8 +14,8 @@
         android:id="@+id/menu_Create"
         android:icon="@android:drawable/ic_menu_edit"
         android:title="@string/create_menu"/>
-    
-    <item 
+
+    <item
         android:id="@+id/menu_setG"
         android:icon="@android:drawable/ic_menu_set_as"
         android:title="@string/menu_setG" />
@@ -24,11 +24,11 @@
         android:id="@+id/menu_history"
         android:icon="@android:drawable/ic_menu_recent_history"
         android:title="@string/view_hist"/>
-     
+
     <item
         android:id="@+id/menu_summ"
         android:title="@string/view_sum"
         android:icon="@android:drawable/ic_menu_gallery"/>
-   
+
 
 </menu>
