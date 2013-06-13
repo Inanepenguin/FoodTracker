@@ -77,11 +77,11 @@ public class CreateAMealActivity extends Activity{
 	{
 		mealSpin = (Spinner) findViewById (R.id.spinner_meal);
 		meal_spin = getResources().getStringArray(R.array.meal_array);
-	
+
 		ArrayAdapter<String> adpt = new ArrayAdapter<String>(CreateAMealActivity.this, android.R.layout.simple_spinner_item, meal_spin);
 		adpt.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
 		mealSpin.setAdapter(adpt);
-		
+
 		mealSpin.setOnItemSelectedListener(new OnItemSelectedListener()
 		{
 			public void onItemSelected(AdapterView<?> arg0, View arg1, int pos, long id)
@@ -89,7 +89,7 @@ public class CreateAMealActivity extends Activity{
 				spin_val = meal_spin[pos];
 				myMeal.setSpinner(spin_val);
 			}
-			
+
 			public void onNothingSelected(AdapterView<?> arg0)
 			{
 				spin_val = meal_spin[5];
@@ -97,8 +97,8 @@ public class CreateAMealActivity extends Activity{
 			}
 		});
 	}
-	
-	
+
+
 	public void addListenerOnButton()
 	{
 		btnDone = (Button) findViewById (R.id.done_button);
@@ -107,7 +107,7 @@ public class CreateAMealActivity extends Activity{
 
 			public void onClick(View v)
 			{
-				
+
 				eName = (EditText) findViewById(R.id.edit_name);
 				eItem1 = (EditText) findViewById(R.id.edit_item1);
 				eItem2 = (EditText) findViewById(R.id.edit_item2);
@@ -119,30 +119,44 @@ public class CreateAMealActivity extends Activity{
 
 				//this is where I will get my class stuff! use
 				//.getText() to get radioButton stuff
+                if(eName.getText().toString().trim().length()!=0)
+                {
+                    myMeal.setMealName(eName.getText().toString());
+                    myMeal.set_item1(eItem1.getText().toString());
+                    myMeal.set_item2(eItem2.getText().toString());
+                    myMeal.set_item3(eItem3.getText().toString());
+                    if(eCal.getText().toString().trim().length()==0)
+                        eCal.setText("0");
+                    myMeal.setCal(Integer.parseInt(eCal.getText().toString()));
+                    if(eCarb.getText().toString().trim().length()==0)
+                        eCarb.setText("0");
+                    myMeal.setCarb(Integer.parseInt(eCarb.getText().toString()));
+                    if(eFat.getText().toString().trim().length()==0)
+                        eFat.setText("0");
+                    myMeal.setFat(Integer.parseInt(eFat.getText().toString()));
+                    if(eProt.getText().toString().trim().length()==0)
+                        eProt.setText("0");
+                    myMeal.setProt(Integer.parseInt(eProt.getText().toString()));
 
-				myMeal.setMealName(eName.getText().toString());
-				myMeal.set_item1(eItem1.getText().toString());
-				myMeal.set_item2(eItem2.getText().toString());
-				myMeal.set_item3(eItem3.getText().toString());
-				myMeal.setCal(Integer.parseInt(eCal.getText().toString()));
-				myMeal.setCarb(Integer.parseInt(eCarb.getText().toString()));
-				myMeal.setFat(Integer.parseInt(eFat.getText().toString()));
-				myMeal.setProt(Integer.parseInt(eProt.getText().toString()));
+                    cCal = myMeal.getCal();
+                    cCarb = myMeal.getCarb();
+                    cProt = myMeal.getProt();
+                    cFat = myMeal.getFat();
 
-				cCal = myMeal.getCal();
-				cCarb = myMeal.getCarb();
-				cProt = myMeal.getProt();
-				cFat = myMeal.getFat();
-				
-				glob.setMealC(myMeal, gCnt);
-				glob.setCount();
-				glob.setTMeals(gCnt);
-				glob.setTCal(cCal);
-				glob.setTCarb(cCarb);
-				glob.setTFat(cFat);
-				glob.setTProt(cProt);
-				
-				finish();
+                    glob.setMealC(myMeal, gCnt);
+                    glob.setCount();
+                    glob.setTMeals(gCnt);
+                    glob.setTCal(cCal);
+                    glob.setTCarb(cCarb);
+                    glob.setTFat(cFat);
+                    glob.setTProt(cProt);
+
+                    finish();
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(), "Please provide a name for this meal!", Toast.LENGTH_SHORT).show();
+                }
 			}
 		});
 
@@ -182,7 +196,7 @@ public class CreateAMealActivity extends Activity{
 			 Intent setInt = new Intent(this, SetGoals.class);
 			 startActivity(setInt);
 			 break;
-			 
+
 		default:
 			break;
 		 }
