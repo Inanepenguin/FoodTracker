@@ -35,6 +35,7 @@ public class CreateAMealActivity extends Activity{
 	private EditText eFat;
 	private EditText eProt;
 	private CreateMealClass myMeal;
+	private boolean caseM;
 	GlobalsClass glob;
 	private int gCnt;
 	private int cCal;
@@ -54,6 +55,7 @@ public class CreateAMealActivity extends Activity{
 		myMeal = new CreateMealClass();
 		glob = (GlobalsClass)getApplication();
 		gCnt = glob.getCount();
+		caseM = false;
 	}
 
 
@@ -142,6 +144,10 @@ public class CreateAMealActivity extends Activity{
 				glob.setTFat(cFat);
 				glob.setTProt(cProt);
 				
+				caseM = true;
+				Intent results = new Intent();
+				results.putExtra("meal", caseM);
+				setResult(RESULT_OK, results);
 				finish();
 			}
 		});

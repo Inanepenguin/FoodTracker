@@ -1,11 +1,13 @@
 package edu.ucsb.cs.cs185.FoodTracker;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.*;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -18,6 +20,9 @@ public class FoodTrackerActivity extends FragmentActivity {
     @SuppressWarnings("unused")
 	private int count = 0;
     private int mealH = 1;
+    private int holdMG = 1;
+    private int added = -1;
+    static final int MEAL_TAG = 1;
     ListView homeList;
     ArrayList<String> list = new ArrayList<String>();
     ArrayAdapter<String> adapter;
@@ -42,9 +47,10 @@ public class FoodTrackerActivity extends FragmentActivity {
             }
         });
         setupWeekOverview();
-        if(glob.getCount() != 0)
+        if((gCounter = glob.getCount()) == holdMG )
         {
-        	addMealForToday(glob.getMealC(glob.getCount()).getMealName().toString());
+        	addMealForToday((glob.getMealC(holdMG)).getMealName().toString());
+        	holdMG++;
         }
     }
 
@@ -89,7 +95,7 @@ public class FoodTrackerActivity extends FragmentActivity {
     		break;
     	case R.id.menu_Create:
     		Intent myIntent = new Intent(this, CreateAMealActivity.class);
-    		startActivity(myIntent);
+    		startActivityForResult(myIntent, MEAL_TAG);
     		break;
     	case R.id.menu_summ:
     		Intent summaryInt = new Intent(this, SummaryActivity.class);
@@ -114,8 +120,22 @@ public class FoodTrackerActivity extends FragmentActivity {
     	return true;
     }
 
+    protected void onActivityResult(int req, int code, Intent data)
+    {
+    	super.onActivityResult(req, code, data);
+    	if(req == MEAL_TAG)
+    	{
+    		if(code == Activity.RESULT_OK)
+    		{
+    			addMealForToday((glob.getMealC(holdMG)).getMealName().toString());
+            	holdMG++;
+    		}
+    	}
+    }
+    
     public void addMealForToday(String choice) {
-    	if((gCounter =  glob.getCount()) != 0)
+    	int i = getChoice(choice);
+    	if((gCounter =  glob.getCount()) != 0  && ( i == -1))
     	{
     		CreateMealClass mCreated = glob.getMealC(gCounter);
     		StringBuilder bud = new StringBuilder();
@@ -132,10 +152,9 @@ public class FoodTrackerActivity extends FragmentActivity {
     		adapter.notifyDataSetChanged();
     		count++;
     	}
-    	else{
 	        StringBuilder builder = new StringBuilder();
-	        int i = getChoice(choice);
 	        glob.setTMeals(mealH);
+	        
 	        switch(i)
 	        {
 	            case 1:
@@ -241,8 +260,9 @@ public class FoodTrackerActivity extends FragmentActivity {
 	            	list.add(builder.toString());
 	            	adapter.notifyDataSetChanged();
 	            	count++;
-	        }
+	            	break;
     	}
+	    added++;
     }
 
     private int getChoice(String choice){
