@@ -35,6 +35,7 @@ public class CreateAMealActivity extends Activity{
 	private EditText eFat;
 	private EditText eProt;
 	private CreateMealClass myMeal;
+	private boolean caseM;
 	GlobalsClass glob;
 	private int gCnt;
 	private int cCal;
@@ -54,6 +55,7 @@ public class CreateAMealActivity extends Activity{
 		myMeal = new CreateMealClass();
 		glob = (GlobalsClass)getApplication();
 		gCnt = glob.getCount();
+		caseM = false;
 	}
 
 
@@ -105,62 +107,66 @@ public class CreateAMealActivity extends Activity{
 
 		btnDone.setOnClickListener(new OnClickListener() {
 
-			public void onClick(View v)
+		public void onClick(View v)
+		{
+
+		    eName = (EditText) findViewById(R.id.edit_name);
+		    eItem1 = (EditText) findViewById(R.id.edit_item1);
+		    eItem2 = (EditText) findViewById(R.id.edit_item2);
+		    eItem3 = (EditText) findViewById(R.id.edit_item3);
+		    eCal = (EditText) findViewById(R.id.edit_cal);
+		    eCarb = (EditText) findViewById(R.id.edit_carbs);
+		    eFat = (EditText) findViewById(R.id.edit_fat);
+		    eProt = (EditText) findViewById(R.id.edit_protein);
+
+		    //this is where I will get my class stuff! use
+		    //.getText() to get radioButton stuff
+		    if(eName.getText().toString().trim().length()!=0)
 			{
+			    myMeal.setMealName(eName.getText().toString());
+			    myMeal.set_item1(eItem1.getText().toString());
+			    myMeal.set_item2(eItem2.getText().toString());
+			    myMeal.set_item3(eItem3.getText().toString());
+			    if(eCal.getText().toString().trim().length()==0)
+				eCal.setText("0");
+			    myMeal.setCal(Integer.parseInt(eCal.getText().toString()));
+			    if(eCarb.getText().toString().trim().length()==0)
+				eCarb.setText("0");
+			    myMeal.setCarb(Integer.parseInt(eCarb.getText().toString()));
+			    if(eFat.getText().toString().trim().length()==0)
+				eFat.setText("0");
+			    myMeal.setFat(Integer.parseInt(eFat.getText().toString()));
+			    if(eProt.getText().toString().trim().length()==0)
+				eProt.setText("0");
+			    myMeal.setProt(Integer.parseInt(eProt.getText().toString()));
+			    
+			    cCal = myMeal.getCal();
+			    cCarb = myMeal.getCarb();
+			    cProt = myMeal.getProt();
+			    cFat = myMeal.getFat();
+			    
+			    glob.setMealC(myMeal, gCnt);
+			    glob.setCount();
+			    glob.setTMeals(gCnt);
+			    glob.setTCal(cCal);
+			    glob.setTCarb(cCarb);
+			    glob.setTFat(cFat);
+			    glob.setTProt(cProt);
 
-				eName = (EditText) findViewById(R.id.edit_name);
-				eItem1 = (EditText) findViewById(R.id.edit_item1);
-				eItem2 = (EditText) findViewById(R.id.edit_item2);
-				eItem3 = (EditText) findViewById(R.id.edit_item3);
-				eCal = (EditText) findViewById(R.id.edit_cal);
-				eCarb = (EditText) findViewById(R.id.edit_carbs);
-				eFat = (EditText) findViewById(R.id.edit_fat);
-				eProt = (EditText) findViewById(R.id.edit_protein);
-
-				//this is where I will get my class stuff! use
-				//.getText() to get radioButton stuff
-                if(eName.getText().toString().trim().length()!=0)
-                {
-                    myMeal.setMealName(eName.getText().toString());
-                    myMeal.set_item1(eItem1.getText().toString());
-                    myMeal.set_item2(eItem2.getText().toString());
-                    myMeal.set_item3(eItem3.getText().toString());
-                    if(eCal.getText().toString().trim().length()==0)
-                        eCal.setText("0");
-                    myMeal.setCal(Integer.parseInt(eCal.getText().toString()));
-                    if(eCarb.getText().toString().trim().length()==0)
-                        eCarb.setText("0");
-                    myMeal.setCarb(Integer.parseInt(eCarb.getText().toString()));
-                    if(eFat.getText().toString().trim().length()==0)
-                        eFat.setText("0");
-                    myMeal.setFat(Integer.parseInt(eFat.getText().toString()));
-                    if(eProt.getText().toString().trim().length()==0)
-                        eProt.setText("0");
-                    myMeal.setProt(Integer.parseInt(eProt.getText().toString()));
-
-                    cCal = myMeal.getCal();
-                    cCarb = myMeal.getCarb();
-                    cProt = myMeal.getProt();
-                    cFat = myMeal.getFat();
-
-                    glob.setMealC(myMeal, gCnt);
-                    glob.setCount();
-                    glob.setTMeals(gCnt);
-                    glob.setTCal(cCal);
-                    glob.setTCarb(cCarb);
-                    glob.setTFat(cFat);
-                    glob.setTProt(cProt);
-
-                    finish();
-                }
-                else
-                {
-                    Toast.makeText(getApplicationContext(), "Please provide a name for this meal!", Toast.LENGTH_SHORT).show();
-                }
+			    caseM = true;
+			    Intent results = new Intent();
+			    results.putExtra("meal", caseM);
+			    setResult(RESULT_OK, results);
+			    finish();
 			}
-		});
-
-
+		    else
+			{
+			    Toast.makeText(getApplicationContext(), "Please provide a name for this meal!", Toast.LENGTH_SHORT).show();
+			}
+		}		
+		    });
+		
+		
 
 	}
 
